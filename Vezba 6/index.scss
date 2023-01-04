@@ -62,6 +62,8 @@
 
 .text {
   @include center();
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
 .title {
