@@ -1,0 +1,77 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  @include center();
+  flex-direction: column;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #0e1b4d;
+}
+
+.intro {
+  color: gray;
+  font-size: 25 px;
+}
+
+.bar {
+  margin-top: 15px;
+  border: 2px solid #f82249;
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.daysContainer {
+  @include center();
+}
+
+.days {
+  @include center();
+  flex-direction: column;
+  width: 70%;
+}
+
+.day {
+  @include center();
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 33.33%;
+  border-radius: 10px;
+  height: 20px;
+  background-color: #0e1b4d;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.day:hover {
+  background-color: #f82249;
+}
+
+.text {
+  @include center();
+}
+
+.title {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.agenda .agendaDay {
+  border-bottom: 1px solid gray;
+}
+
+@media only screen and (min-width: 768px) {
+}

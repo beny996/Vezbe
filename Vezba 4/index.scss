@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  background-image: url("images/plan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textbox {
+  background-color: white;
+  position: relative;
+  padding: 25px;
+  width: 80%;
+}
+
+.create {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.main {
+  font-size: 25px;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.number img {
+  width: 20px;
+  margin-top: 20px;
+}
+
+.text {
+  color: gray;
+}
+
+span {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .textbox {
+    left: 20%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .container {
+    justify-content: flex-start;
+  }
+}

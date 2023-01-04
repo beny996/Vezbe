@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.headerContainer div {
+  color: gray;
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+
+.image {
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+.image .courseDescription {
+  color: gray;
+}
+.image button {
+  margin-top: 25px;
+  background-color: white;
+  padding: 10px;
+}
+.image button:hover {
+  background-color: greenyellow;
+}
+
+img {
+  height: 300px;
+  width: 100%;
+}
+
+.imagesContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.programPrice {
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.span1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.span2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  margin-left: auto;
+}/*# sourceMappingURL=index.css.map */
