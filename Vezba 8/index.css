@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-left: 16%;
+}
+
+.header-image img {
+  width: 50px;
+  height: 50px;
+}
+
+.header-content-heading {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header-divider {
+  width: 2px;
+  height: 40px;
+  border-left: 2px solid gray;
+  opacity: 20%;
+  margin: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+.main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  min-width: 150px;
+  width: 25%;
+  margin: 10px;
+}
+
+.main-card-plan-heading {
+  color: #6b6b6b;
+}
+
+.main-card-plan-period {
+  color: #6b6b6b;
+}
+
+.main-card-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #f2f2f2;
+}
+
+.main-card-price:hover {
+  background-color: #ee3c25;
+}
+.main-card-price:hover .main-card-price-caret {
+  border-top: 20px solid #ee3c25;
+}
+.main-card-price:hover .main-card-price-dollar {
+  color: white;
+}
+
+.main-card-price-dollar {
+  font-size: 40px;
+  color: #6b6b6b;
+}
+
+.main-card-options {
+  text-align: center;
+  width: 100%;
+  margin: 20px;
+  border-bottom: 1px dashed #ebebeb;
+}
+
+.main-card-options-last {
+  border: none;
+}
+
+.main-card-price-caret {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  bottom: -20%;
+  border-top: 20px solid #f2f2f2;
+}
+
+.main-card-button {
+  text-align: center;
+  width: 50%;
+  border-radius: 15px;
+  border: 1px solid #ee3c25;
+  position: absolute;
+  bottom: -2%;
+  background-color: white;
+}
+
+.main-card-button:hover {
+  background-color: #ee3c25;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=index.css.map */

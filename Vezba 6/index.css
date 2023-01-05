@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+body {
+  position: relative;
+  height: 100vh;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -49,13 +54,14 @@
   align-items: center;
   margin-bottom: 10px;
   margin-right: 10px;
-  width: 33.33%;
-  border-radius: 10px;
-  height: 20px;
+  width: 50%;
+  border-radius: 15px;
+  height: 30px;
   background-color: #0e1b4d;
   color: white;
   font-size: 12px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .day:hover {
@@ -70,11 +76,96 @@
   margin-bottom: 20px;
 }
 
-.title {
-  display: inline-block;
-  font-weight: bold;
+.event {
+  margin-bottom: 2%;
+  margin-left: 10%;
 }
 
 .agenda .agendaDay {
   border-bottom: 1px solid gray;
+}
+
+.agenda .agendaDay:last-child {
+  border: none;
+}
+
+.agendaDay {
+  display: flex;
+  flex-direction: row;
+}
+
+.type {
+  font-weight: bold;
+}
+
+.name {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.agendaContainer {
+  display: flex;
+  align-items: center;
+  margin: 2% 10%;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.time {
+  margin-top: 2%;
+}
+
+.description {
+  font-style: italic;
+}
+
+img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.image {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #f82249;
+}
+
+.scroll img {
+  width: 10px;
+  height: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .days {
+    flex-direction: row;
+  }
+  .day {
+    height: 40px;
+    border-radius: 30px;
+  }
+  .agenda {
+    width: 65%;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=index.css.map */
