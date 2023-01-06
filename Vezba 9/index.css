@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-button {
+  width: 10%;
+  border: none;
+  background-color: white;
+}
+
+.navigation-underline {
+  width: 2px;
+  border-left: 2px solid orange;
+  height: 20px;
+}/*# sourceMappingURL=index.css.map */
