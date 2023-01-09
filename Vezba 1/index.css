@@ -19,12 +19,13 @@
   justify-content: space-evenly;
   align-items: center;
   width: 70%;
+  flex-direction: column;
 }
 
 .image {
-  width: 30%;
-  margin: 0;
+  width: 100%;
   padding: 0;
+  margin: 10px 0;
 }
 .image .courseDescription {
   color: gray;
@@ -66,4 +67,13 @@ img {
   font-weight: bold;
   color: red;
   margin-left: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .images {
+    flex-direction: row;
+  }
+  .images .image {
+    width: 30%;
+  }
 }/*# sourceMappingURL=index.css.map */
