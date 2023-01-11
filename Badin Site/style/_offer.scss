@@ -1,0 +1,58 @@
+.offer {
+  background-color: #f9fafe;
+  padding: 50px 16px;
+  .offer-heading {
+    @include font-secondary-italic;
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+
+  .offer-content {
+    margin: 32px 0;
+    font-size: 16px;
+    @include font-primary-demi;
+  }
+
+  .offer-button {
+    color: #fff;
+    background-color: #317ade;
+    border-radius: 35px;
+    border: none;
+    padding: 12px 33px;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .offer-cards-item-title-blue {
+    padding: 16px 0;
+    color: #317ade;
+  }
+
+  .offer-cards-item-title-orange {
+    padding: 16px 0;
+    color: #ed701d;
+  }
+
+  .offer-cards-item-title-green {
+    padding: 16px 0;
+    color: #1ebf73;
+  }
+
+  .offer-cards-item-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 30px 5px;
+  }
+
+  .offer-cards-item-image1 img {
+    width: 160px;
+  }
+
+  .offer-cards-item-image2 img {
+    width: 275px;
+  }
+
+  .offer-cards-item-image3 img {
+    width: 250px;
+  }
+}

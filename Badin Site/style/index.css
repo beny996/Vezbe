@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "futura-pt";
+  src: url("../fonts/FuturaPTBold.otf"), url("../fonts/FuturaPTBoldOblique.otf"), url("../fonts/FuturaPTBook.otf"), url("../fonts/FuturaPTBookOblique.otf"), url("../fonts/FuturaPTCondBold.otf"), url("../fonts/FuturaPTCondBoldOblique.otf"), url("../fonts/FuturaPTCondBook.otf"), url("../fonts/FuturaPTCondBookOblique.otf"), url("../fonts/FuturaPTCondExtraBold.otf"), url("../fonts/FuturaPTCondExtraBoldOblique.otf"), url("../fonts/FuturaPTCondMedium.otf"), url("../fonts/FuturaPTCondMediumOblique.otf"), url("../fonts/FuturaPTDemi.otf"), url("../fonts/FuturaPTDemiOblique.otf"), url("../fonts/FuturaPTExtraBold.otf"), url("../fonts/FuturaPTExtraBoldOblique.otf"), url("../fonts/FuturaPTCondMedium.otf"), url("../fonts/FuturaPTCondMediumOblique.otf"), url("../fonts/FuturaPTDemi.otf"), url("../fonts/FuturaPTDemiOblique.otf"), url("../fonts/FuturaPTExtraBold.otf"), url("../fonts/FuturaPTExtraBoldOblique.otf"), url("../fonts/FuturaPTHeavy.otf"), url("../fonts/FuturaPTHeavyOblique.otf"), url("../fonts/FuturaPTLight.otf"), url("../fonts/FuturaPTLightOblique.otf"), url("../fonts/FuturaPTMedium.otf"), url("../fonts/FuturaPTMediumOblique.otf");
+}
+@font-face {
+  font-family: "lust";
+  src: url("../fonts/lust-slim.ttf");
+}
+.hero {
+  background-image: url("/images/header-hero/hero-bg.png");
+  background-size: cover;
+}
+.hero .hero-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 50px 16px;
+}
+.hero .hero-logo img {
+  width: 98px;
+  height: 35px;
+}
+.hero .hero-text {
+  padding: 50px 16px;
+}
+.hero .hero-text .hero-text-heading {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+.hero .hero-text .hero-text-content {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+  color: #fff;
+  line-height: 1.55;
+  opacity: 0.5;
+}
+.hero .hero-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+.hero .hero-buttons .hero-buttons-button1 {
+  border-radius: 30px;
+  border: none;
+  background-color: #fff;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 16px;
+  padding: 16px 32px;
+}
+.hero .hero-buttons .hero-buttons-button2 {
+  padding: 16px 32px;
+  border-radius: 30px;
+  border: none;
+  background-color: #393939;
+  color: #fff;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  z-index: 1;
+}
+.hero .hero-image-container {
+  position: relative;
+}
+.hero .hero-image-container .hero-image-container-image {
+  position: relative;
+  z-index: 1;
+}
+.hero .hero-image-container .hero-image-container-image img {
+  width: 100%;
+  position: relative;
+  right: -15%;
+  margin-top: 15%;
+}
+.hero .hero-image-container .hero-image-container-grid img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -25%;
+}
+.hero .hero-image-container .hero-image-container-background img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+}
+.hero .hero-image-container .hero-image-container-planet img {
+  width: 12%;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+.hero .hero-image-container .hero-image-container-tower1 img {
+  width: 20%;
+  position: absolute;
+  bottom: -10%;
+  left: 10%;
+}
+.hero .hero-image-container .hero-image-container-tower2 img {
+  width: 15%;
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  z-index: 2;
+}
+
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 16px;
+}
+.clients .clients-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.clients .clients-container img {
+  width: 80%;
+}
+
+.why-badin {
+  padding: 50px 16px;
+  margin-bottom: 50px;
+}
+.why-badin .why-badin-heading {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 48px;
+  margin-bottom: 32px;
+}
+.why-badin .why-badin-paragraph {
+  margin: 32px 0;
+  font-size: 16px;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.why-badin > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px gray;
+}
+
+.offer {
+  background-color: #f9fafe;
+  padding: 50px 16px;
+}
+.offer .offer-heading {
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 48px;
+  margin-bottom: 32px;
+}
+.offer .offer-content {
+  margin: 32px 0;
+  font-size: 16px;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.offer .offer-button {
+  color: #fff;
+  background-color: #317ade;
+  border-radius: 35px;
+  border: none;
+  padding: 12px 33px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.offer .offer-cards-item-title-blue {
+  padding: 16px 0;
+  color: #317ade;
+}
+.offer .offer-cards-item-title-orange {
+  padding: 16px 0;
+  color: #ed701d;
+}
+.offer .offer-cards-item-title-green {
+  padding: 16px 0;
+  color: #1ebf73;
+}
+.offer .offer-cards-item-icons img {
+  width: 40px;
+  height: 40px;
+  margin: 30px 5px;
+}
+.offer .offer-cards-item-image1 img {
+  width: 160px;
+}
+.offer .offer-cards-item-image2 img {
+  width: 275px;
+}
+.offer .offer-cards-item-image3 img {
+  width: 250px;
+}
+
+.clients-words {
+  background-color: #f9fafe;
+  padding: 50px 16px;
+}
+.clients-words .clients-words-heading {
+  font-size: 48px;
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 32px;
+  color: #22252e;
+}
+.clients-words .clients-words-content {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 50px;
+  font-size: 20px;
+  color: #6b728e;
+  opacity: 0.8;
+}
+.clients-words .clients-words-cards {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+.clients-words .clients-words-cards img {
+  width: 80px;
+  margin-right: 20px;
+}
+.clients-words .clients-words-cards .first {
+  width: 130px;
+}
+.clients-words .clients-words-client {
+  font-size: 24px;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #22252e;
+}
+.clients-words .clients-words-title {
+  font-size: 16px;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #6b728e;
+  margin-bottom: 32px;
+}
+.clients-words .clients-words-text {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.hire-us {
+  padding: 50px 16px;
+}
+.hire-us .hire-us-help {
+  font-size: 50px;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  opacity: 0.1;
+}
+.hire-us .hire-us-start {
+  font-size: 48px;
+  font-family: lust, "Courier", serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #22252e;
+  margin-bottom: 32px;
+}
+.hire-us .hire-us-content {
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 16px;
+  color: #6b728e;
+  margin-bottom: 32px;
+}
+.hire-us .hire-us-button {
+  background-color: #317ade;
+  font-size: 20px;
+  font-family: futura-pt, "Arial Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  border-radius: 35px;
+  border: none;
+  padding: 12px 33px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}/*# sourceMappingURL=index.css.map */

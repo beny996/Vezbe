@@ -1,0 +1,19 @@
+@import "config";
+@import "font";
+@import "hero";
+@import "clients";
+@import "why-badin";
+@import "offer";
+@import "clients-words";
+@import "hire-us";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

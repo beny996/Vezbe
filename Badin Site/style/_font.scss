@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "futura-pt";
+  src: url("../fonts/FuturaPTBold.otf"), url("../fonts/FuturaPTBoldOblique.otf"),
+    url("../fonts/FuturaPTBook.otf"), url("../fonts/FuturaPTBookOblique.otf"),
+    url("../fonts/FuturaPTCondBold.otf"),
+    url("../fonts/FuturaPTCondBoldOblique.otf"),
+    url("../fonts/FuturaPTCondBook.otf"),
+    url("../fonts/FuturaPTCondBookOblique.otf"),
+    url("../fonts/FuturaPTCondExtraBold.otf"),
+    url("../fonts/FuturaPTCondExtraBoldOblique.otf"),
+    url("../fonts/FuturaPTCondMedium.otf"),
+    url("../fonts/FuturaPTCondMediumOblique.otf"),
+    url("../fonts/FuturaPTDemi.otf"), url("../fonts/FuturaPTDemiOblique.otf"),
+    url("../fonts/FuturaPTExtraBold.otf"),
+    url("../fonts/FuturaPTExtraBoldOblique.otf"),
+    url("../fonts/FuturaPTCondMedium.otf"),
+    url("../fonts/FuturaPTCondMediumOblique.otf"),
+    url("../fonts/FuturaPTDemi.otf"), url("../fonts/FuturaPTDemiOblique.otf"),
+    url("../fonts/FuturaPTExtraBold.otf"),
+    url("../fonts/FuturaPTExtraBoldOblique.otf"),
+    url("../fonts/FuturaPTHeavy.otf"), url("../fonts/FuturaPTHeavyOblique.otf"),
+    url("../fonts/FuturaPTLight.otf"), url("../fonts/FuturaPTLightOblique.otf"),
+    url("../fonts/FuturaPTMedium.otf"),
+    url("../fonts/FuturaPTMediumOblique.otf");
+}
+
+@font-face {
+  font-family: "lust";
+  src: url("../fonts/lust-slim.ttf");
+}
+
+$font-weight-light: 300;
+$font-wight-regular: 400;
+$font-weight-small: 500;
+$font-weight-medium: 600;
+$font-weight-strong: 700;
+$font-weight-bold: 800;
+$font-weight-bolder: 900;
+//add font-family
+$font-family-primary: futura-pt, "Arial Condensed", sans-serif;
+$font-family-secondary: lust, "Courier", serif;
+@mixin font-primary-light {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-light;
+  font-style: normal;
+}
+@mixin font-primary-medium {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-small;
+  font-style: normal;
+}
+@mixin font-primary-medium-italic {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-small;
+  font-style: italic;
+}
+@mixin font-primary-heavy {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-strong;
+  font-style: normal;
+}
+@mixin font-primary-demi {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-medium;
+  font-style: normal;
+}
+@mixin font-primary-bold {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-strong;
+  font-style: normal;
+}
+@mixin font-secondary-italic {
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-strong;
+  font-style: italic;
+}
+@mixin font-code {
+  font-family: source-code-pro, monospace;
+  font-weight: $font-weight-strong;
+  font-style: normal;
+}

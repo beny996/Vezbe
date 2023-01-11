@@ -1,0 +1,15 @@
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 16px;
+
+  .clients-container {
+    @include center();
+    margin: 10px 0;
+    img {
+      width: 80%;
+    }
+  }
+}

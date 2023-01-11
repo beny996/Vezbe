@@ -1,0 +1,52 @@
+.clients-words {
+  background-color: #f9fafe;
+  padding: 50px 16px;
+
+  .clients-words-heading {
+    font-size: 48px;
+    @include font-secondary-italic;
+    margin-bottom: 32px;
+    color: #22252e;
+  }
+
+  .clients-words-content {
+    @include font-primary-medium;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: #6b728e;
+    opacity: 0.8;
+  }
+
+  .clients-words-cards {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 32px;
+
+    img {
+      width: 80px;
+      margin-right: 20px;
+    }
+
+    .first {
+      width: 130px;
+    }
+  }
+
+  .clients-words-client {
+    font-size: 24px;
+    @include font-primary-heavy;
+    color: #22252e;
+  }
+
+  .clients-words-title {
+    font-size: 16px;
+    @include font-primary-heavy;
+    color: #6b728e;
+    margin-bottom: 32px;
+  }
+
+  .clients-words-text {
+    @include font-primary-medium-italic;
+    font-size: 20px;
+  }
+}

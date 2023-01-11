@@ -1,0 +1,33 @@
+.hire-us {
+  padding: 50px 16px;
+  .hire-us-help {
+    font-size: 50px;
+    @include font-primary-heavy;
+    opacity: 0.1;
+  }
+
+  .hire-us-start {
+    font-size: 48px;
+    @include font-secondary-italic;
+    color: #22252e;
+    margin-bottom: 32px;
+  }
+
+  .hire-us-content {
+    @include font-primary-demi;
+    opacity: 0.8;
+    font-size: 16px;
+    color: #6b728e;
+    margin-bottom: 32px;
+  }
+
+  .hire-us-button {
+    background-color: #317ade;
+    font-size: 20px;
+    @include font-primary-demi;
+    color: white;
+    border-radius: 35px;
+    border: none;
+    padding: 12px 33px;
+  }
+}
