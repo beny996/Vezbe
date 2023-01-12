@@ -1,0 +1,18 @@
+.trusted-by {
+  padding: 50px 0;
+  background-color: #f9fafe;
+  .trusted-by-container-title {
+    text-align: center;
+    @include font-primary-demi;
+    font-size: 16px;
+    color: #6b728e;
+  }
+
+  .trusted-by-container-clients {
+    display: flex;
+
+    img {
+      width: 50%;
+    }
+  }
+}

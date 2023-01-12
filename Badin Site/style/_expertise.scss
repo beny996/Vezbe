@@ -1,0 +1,10 @@
+.expertise {
+  background-color: #1f70e0;
+  padding: 50px 16px;
+  p {
+    @include font-secondary-italic;
+    font-size: 48px;
+    color: #fff;
+    width: 70%;
+  }
+}

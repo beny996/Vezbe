@@ -109,3 +109,39 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    .hero-container-left {
+      width: 80%;
+      padding: 50px 200px;
+      .hero-buttons {
+        flex-direction: row;
+        gap: 16px;
+
+        .hero-buttons-button1 {
+          margin-bottom: 0;
+        }
+      }
+      .her-text {
+        width: 70%;
+        .hero-text-heading {
+          font-size: 90px;
+        }
+      }
+    }
+
+    .hero-container-right {
+      width: 70%;
+      position: relative;
+      right: -20%;
+
+      .hero-image-container {
+        width: 80%;
+        position: relative;
+        right: -30%;
+        top: -400px;
+      }
+    }
+  }
+}

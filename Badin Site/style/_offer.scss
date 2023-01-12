@@ -5,12 +5,15 @@
     @include font-secondary-italic;
     font-size: 48px;
     margin-bottom: 32px;
+    color: #22252e;
   }
 
   .offer-content {
     margin: 32px 0;
     font-size: 16px;
     @include font-primary-demi;
+    color: #6b728e;
+    opacity: 0.8;
   }
 
   .offer-button {
@@ -26,16 +29,27 @@
   .offer-cards-item-title-blue {
     padding: 16px 0;
     color: #317ade;
+    font-size: 18px;
+    @include font-primary-heavy;
   }
 
   .offer-cards-item-title-orange {
     padding: 16px 0;
     color: #ed701d;
+    font-size: 18px;
+    @include font-primary-heavy;
   }
 
   .offer-cards-item-title-green {
     padding: 16px 0;
     color: #1ebf73;
+    font-size: 18px;
+    @include font-primary-heavy;
+  }
+
+  .offer-cards-item-title-heading {
+    font-size: 28px;
+    @include font-primary-heavy;
   }
 
   .offer-cards-item-icons img {
@@ -54,5 +68,53 @@
 
   .offer-cards-item-image3 img {
     width: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .offer {
+    @include center();
+    .offer-heading {
+      width: 80%;
+      font-size: 90px;
+    }
+    .offer-content {
+      font-size: 20px;
+    }
+    .offer-container {
+      width: 80%;
+      .offer-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .offer-text-left {
+          width: 50%;
+        }
+      }
+
+      .offer-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        .offer-cards-item {
+          transition: transform 0.3s;
+        }
+
+        .offer-cards-item:hover {
+          transform: scale(1.1);
+          .blue {
+            color: #317ade;
+          }
+
+          .orange {
+            color: #ed701d;
+          }
+
+          .green {
+            color: #1ebf73;
+          }
+        }
+      }
+    }
   }
 }

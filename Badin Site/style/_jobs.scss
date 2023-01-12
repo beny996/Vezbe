@@ -1,0 +1,95 @@
+.jobs {
+  padding: 50px 16px;
+  padding-top: 130px;
+  background-color: #f9fafe;
+  .jobs-header h2 {
+    font-size: 48px;
+    @include font-secondary-italic;
+    color: #22252e;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .jobs-header h2::before {
+    content: "Open positions";
+    opacity: 0.1;
+    font-size: 70px;
+    @include font-primary-heavy;
+    position: absolute;
+    color: #6b728e;
+    top: -140%;
+    line-height: 0.74;
+  }
+  .jobs-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .jobs-cards-item {
+      background-color: white;
+      border-radius: 10px;
+      padding: 24px 16px;
+      box-shadow: 0 0 20px #f0f1f4;
+      margin-bottom: 50px;
+      width: 100%;
+
+      .jobs-cards-item-title {
+        @include font-primary-heavy;
+        font-size: 18px;
+        color: #22252e;
+        margin-bottom: 32px;
+      }
+
+      .jobs-cards-item-button {
+        border: none;
+        border-radius: 35px;
+        background-color: #317ade;
+        color: #fff;
+        @include font-primary-heavy;
+        font-size: 20px;
+        padding: 12px 33px;
+        .jobs-cards-item-button-apply {
+          display: flex;
+          img {
+            width: 20px;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+    .jobs-cards-all {
+      border: none;
+      background-color: #000;
+      border-radius: 35px;
+      color: #fff;
+      padding: 16px 32px;
+      @include font-primary-heavy;
+      font-size: 20px;
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .jobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .jobs-header h2 {
+      font-size: 90px;
+    }
+    .jobs-header h2::before {
+      top: -50%;
+      font-size: 150px;
+    }
+    .jobs-container {
+      width: 60%;
+      .jobs-cards-all {
+        width: 30%;
+      }
+    }
+  }
+}

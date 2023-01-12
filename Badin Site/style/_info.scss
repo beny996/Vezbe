@@ -1,0 +1,31 @@
+.info {
+  padding: 150px 16px;
+  .info-heading h2 {
+    font-size: 48px;
+    @include font-secondary-italic;
+    color: #22252e;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .info-heading h2::before {
+    content: "Are you ready?";
+    opacity: 0.1;
+    font-size: 70px;
+    @include font-primary-heavy;
+    position: absolute;
+    top: -70%;
+    line-height: 0.74;
+  }
+
+  img {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .info-email {
+    @include font-primary-demi;
+    font-size: 40px;
+    text-decoration: underline;
+  }
+}
