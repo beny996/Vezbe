@@ -9,10 +9,16 @@
   }
 
   .trusted-by-container-clients {
+    animation: scroll3 10s infinite forwards linear;
     display: flex;
-
     img {
       width: 50%;
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .trusted-by {
+    display: none;
   }
 }

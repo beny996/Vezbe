@@ -74,6 +74,7 @@
 @media only screen and (min-width: 768px) {
   .offer {
     @include center();
+    padding: 50px 150px;
     .offer-heading {
       width: 80%;
       font-size: 90px;
@@ -95,7 +96,7 @@
       .offer-cards {
         display: flex;
         justify-content: space-between;
-        gap: 30px;
+        gap: 20px;
         .offer-cards-item {
           transition: transform 0.3s;
         }

@@ -76,3 +76,25 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    .footer-container {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 3;
+      justify-content: space-between;
+      margin: 30px 120px;
+      .footer-cards {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+      }
+      border-bottom: 1px solid rgba(214, 193, 193, 0.2);
+    }
+    .footer-copyright {
+      text-align: center;
+      border: none;
+    }
+  }
+}

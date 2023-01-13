@@ -27,5 +27,27 @@
     @include font-primary-demi;
     font-size: 40px;
     text-decoration: underline;
+    color: #000;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .info {
+    padding: 50px 150px;
+    img {
+      width: 35%;
+      margin-left: 70%;
+      margin-top: -20%;
+    }
+    .info-heading h2 {
+      margin-top: 10%;
+      font-size: 90px;
+      width: 80%;
+    }
+    .info-heading h2::before {
+      font-size: 150px;
+      white-space: nowrap;
+      top: -30%;
+    }
   }
 }

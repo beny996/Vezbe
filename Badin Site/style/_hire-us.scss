@@ -1,6 +1,10 @@
 .hire-us {
   padding: 50px 16px;
-  margin: 32px 0;
+  background-color: #fff;
+
+  .trusted-by-desktop {
+    display: none;
+  }
 
   .hire-us-start h2 {
     font-size: 48px;
@@ -35,5 +39,42 @@
     border-radius: 35px;
     border: none;
     padding: 12px 33px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hire-us {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    .hire-us-container {
+      width: 100%;
+      background-color: #fff;
+      padding: 15% 10%;
+      .hire-us-start h2 {
+        font-size: 90px;
+      }
+      .hire-us-start h2::before {
+        font-size: 90px;
+      }
+    }
+    .trusted-by-desktop {
+      display: block;
+      width: 30%;
+      background-color: #f9fafe;
+      text-align: center;
+      padding-bottom: 150px;
+      img {
+        width: 60%;
+        margin-bottom: 30px;
+      }
+      .trusted-by-heading {
+        @include font-primary-demi;
+        color: #6b728e;
+        font-size: 16px;
+        text-align: center;
+        padding: 30px 0;
+      }
+    }
   }
 }

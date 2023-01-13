@@ -50,3 +50,89 @@
     font-size: 20px;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .clients-words {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .clients-words-heading-container {
+      .clients-words-heading {
+        font-size: 90px;
+      }
+      .clients-words-content {
+        width: 40%;
+      }
+    }
+    .clients-words-cards {
+      position: relative;
+      height: 300px;
+      width: 350%;
+      .clients-words-cards-image {
+        img,
+        .first {
+          width: 90px;
+        }
+      }
+
+      .clients-words-cards-image:nth-child(1) {
+        position: absolute;
+        animation: image1 15s infinite;
+      }
+      .clients-words-cards-image:nth-child(2) {
+        position: absolute;
+        animation: image2 15s infinite;
+      }
+      .clients-words-cards-image:nth-child(3) {
+        position: absolute;
+        animation: image3 15s infinite;
+      }
+      .clients-words-cards-image:nth-child(4) {
+        position: absolute;
+        animation: image4 15s infinite;
+      }
+      .clients-words-cards-image:nth-child(5) {
+        position: absolute;
+        animation: image5 15s infinite;
+      }
+    }
+    .clients-words-container {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      position: relative;
+      border-left: 2px solid rgb(0, 0, 0, 0.2);
+      padding: 0 20px;
+      .clients-words-container-outter1 {
+        animation: text1 15s infinite;
+      }
+      .clients-words-container-outter2 {
+        animation: text2 15s infinite;
+      }
+      .clients-words-container-outter3 {
+        animation: text3 15s infinite;
+      }
+      .clients-words-container-outter4 {
+        animation: text4 15s infinite;
+      }
+      .clients-words-container-outter5 {
+        animation: text5 15s infinite;
+      }
+      .clients-words-container-circle {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-color: #317ade;
+        border-radius: 50%;
+        left: -1.5%;
+        top: 10%;
+      }
+    }
+    .clients-words-desktop {
+      display: flex;
+      margin: 0 auto;
+      gap: 20%;
+      width: 80%;
+    }
+  }
+}

@@ -1,10 +1,50 @@
 .expertise {
   background-color: #1f70e0;
   padding: 50px 16px;
+  .mobile {
+    display: block;
+  }
   p {
     @include font-secondary-italic;
     font-size: 48px;
     color: #fff;
     width: 70%;
+  }
+  span {
+    font-size: 32px;
+    white-space: nowrap;
+    @include font-primary-demi;
+    margin: 20px 0;
+    color: #fff;
+    opacity: 0.5;
+    padding: 0 30px;
+  }
+  .expertise-technologies-left {
+    display: flex;
+    animation: scroll1 10s infinite linear alternate;
+  }
+  .expertise-technologies-right {
+    display: flex;
+    animation: scroll2 10s infinite linear alternate;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .expertise {
+    .expertise-heading {
+      width: 100%;
+      text-align: center;
+      font-size: 90px;
+      margin: 50px 0;
+    }
+    .mobile {
+      display: none;
+    }
+    .expertise-technologies-left {
+      animation: scroll1 30s infinite linear alternate;
+    }
+    .expertise-technologies-right {
+      animation: scroll2 30s infinite linear alternate;
+    }
   }
 }
