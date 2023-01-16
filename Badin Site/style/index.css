@@ -778,10 +778,14 @@
 .gallery-images .desktop2 {
   display: none;
 }
+.gallery-images img {
+  transition: 1s ease;
+}
 .gallery-images .gallery-container-hover {
   display: grid;
   grid-template-columns: 1fr;
   position: relative;
+  cursor: pointer;
 }
 .gallery-images .gallery-container-hover img {
   grid-row-start: 1;
@@ -794,11 +798,15 @@
   top: 45%;
   width: 30px;
   height: 30px;
-  opacity: 0.5;
 }
-.gallery-images .gallery-container-hover:hover .hover {
+.gallery-images .gallery-container-hover:hover img,
+.gallery-images .hover:hover img {
+  filter: brightness(50%);
+}
+.gallery-images .gallery-container-hover:hover .hover,
+.gallery-images .hover:hover .hover {
   display: block;
-  z-index: 1000;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -808,13 +816,6 @@
     gap: 50px;
     padding: 0 50px;
     margin-bottom: 100px;
-  }
-  .gallery-images img {
-    background: url("images/gallery/zoom-in.png");
-    transition: 1s ease;
-  }
-  .gallery-images img:hover {
-    filter: brightness(50%);
   }
   .gallery-images .desktop1 {
     display: block;

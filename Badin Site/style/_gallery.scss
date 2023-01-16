@@ -12,10 +12,16 @@
   .desktop2 {
     display: none;
   }
+
+  img {
+    transition: 1s ease;
+  }
+
   .gallery-container-hover {
     display: grid;
     grid-template-columns: 1fr;
     position: relative;
+    cursor: pointer;
     img {
       grid-row-start: 1;
       grid-column-start: 1;
@@ -28,14 +34,18 @@
       top: 45%;
       width: 30px;
       height: 30px;
-      opacity: 0.5;
     }
   }
 
-  .gallery-container-hover:hover {
+  .gallery-container-hover:hover,
+  .hover:hover {
+    img {
+      filter: brightness(50%);
+    }
+
     .hover {
       display: block;
-      z-index: 1000;
+      z-index: 1;
     }
   }
 }
@@ -47,14 +57,6 @@
     gap: 50px;
     padding: 0 50px;
     margin-bottom: 100px;
-
-    img {
-      background: url("images/gallery/zoom-in.png");
-      transition: 1s ease;
-    }
-    img:hover {
-      filter: brightness(50%);
-    }
 
     .desktop1 {
       display: block;
