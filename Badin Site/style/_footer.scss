@@ -29,9 +29,14 @@
       border-radius: 20px;
       @include center();
       aspect-ratio: 1/1;
+      transition: 1s ease;
+      cursor: pointer;
       img {
         width: 70%;
       }
+    }
+    .footer-icons-item:hover {
+      background-color: #3a3b4d;
     }
   }
 
@@ -58,6 +63,7 @@
         opacity: 0.5;
         text-decoration: none;
         width: 50%;
+        cursor: pointer;
       }
     }
   }

@@ -50,6 +50,8 @@
       color: #000;
       margin-bottom: 16px;
       padding: 16px 32px;
+      cursor: pointer;
+      transition: 1s ease;
     }
 
     .hero-buttons-button2 {
@@ -61,6 +63,13 @@
       @include font-primary-heavy;
       font-size: 24px;
       z-index: 1;
+      cursor: pointer;
+      transition: 1s ease;
+    }
+
+    .hero-buttons-button1:hover,
+    .hero-buttons-button2:hover {
+      opacity: 0.6;
     }
   }
 

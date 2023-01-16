@@ -39,6 +39,11 @@
     border-radius: 35px;
     border: none;
     padding: 12px 33px;
+    cursor: pointer;
+    transition: 1s ease;
+  }
+  .hire-us-button:hover {
+    filter: brightness(80%);
   }
 }
 

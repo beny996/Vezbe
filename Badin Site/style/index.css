@@ -66,6 +66,8 @@
   color: #000;
   margin-bottom: 16px;
   padding: 16px 32px;
+  cursor: pointer;
+  transition: 1s ease;
 }
 .hero .hero-buttons .hero-buttons-button2 {
   padding: 16px 32px;
@@ -78,6 +80,12 @@
   font-style: normal;
   font-size: 24px;
   z-index: 1;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.hero .hero-buttons .hero-buttons-button1:hover,
+.hero .hero-buttons .hero-buttons-button2:hover {
+  opacity: 0.6;
 }
 .hero .hero-image-container {
   position: relative;
@@ -299,6 +307,11 @@
   padding: 12px 33px;
   font-size: 20px;
   margin-bottom: 30px;
+  transition: 1s ease;
+  cursor: pointer;
+}
+.offer .offer-button:hover {
+  filter: brightness(80%);
 }
 .offer .offer-cards-item-title-blue {
   padding: 16px 0;
@@ -596,6 +609,11 @@
   border-radius: 35px;
   border: none;
   padding: 12px 33px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.hire-us .hire-us-button:hover {
+  filter: brightness(80%);
 }
 
 @media only screen and (min-width: 768px) {
@@ -720,6 +738,8 @@
   font-style: normal;
   font-size: 20px;
   padding: 12px 33px;
+  transition: 1s ease;
+  cursor: pointer;
 }
 .jobs .jobs-cards .jobs-cards-item .jobs-cards-item-button .jobs-cards-item-button-apply {
   display: flex;
@@ -727,6 +747,9 @@
 .jobs .jobs-cards .jobs-cards-item .jobs-cards-item-button .jobs-cards-item-button-apply img {
   width: 20px;
   margin-left: 16px;
+}
+.jobs .jobs-cards .jobs-cards-item .jobs-cards-item-button:hover {
+  filter: brightness(80%);
 }
 .jobs .jobs-cards .jobs-cards-all {
   border: none;
@@ -739,6 +762,11 @@
   font-style: normal;
   font-size: 20px;
   width: 80%;
+  cursor: pointer;
+  transition: 1s ease;
+}
+.jobs .jobs-cards .jobs-cards-all:hover {
+  background-color: rgb(39, 36, 36);
 }
 
 @media only screen and (min-width: 768px) {
@@ -747,6 +775,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .jobs .jobs-cards .jobs-cards-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .jobs .jobs-cards .jobs-cards-item .jobs-cards-item-title {
+    font-size: 28px;
+    margin-bottom: 0;
+    padding: 32px;
   }
   .jobs .jobs-header h2 {
     font-size: 90px;
@@ -991,9 +1029,14 @@
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
+  transition: 1s ease;
+  cursor: pointer;
 }
 .footer .footer-icons .footer-icons-item img {
   width: 70%;
+}
+.footer .footer-icons .footer-icons-item:hover {
+  background-color: #3a3b4d;
 }
 .footer .footer-cards {
   display: flex;
@@ -1022,6 +1065,7 @@
   opacity: 0.5;
   text-decoration: none;
   width: 50%;
+  cursor: pointer;
 }
 .footer .footer-copyright {
   width: 100%;

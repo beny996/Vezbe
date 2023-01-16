@@ -24,6 +24,12 @@
     padding: 12px 33px;
     font-size: 20px;
     margin-bottom: 30px;
+    transition: 1s ease;
+    cursor: pointer;
+  }
+
+  .offer-button:hover {
+    filter: brightness(80%);
   }
 
   .offer-cards-item-title-blue {

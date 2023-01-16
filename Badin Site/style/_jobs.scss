@@ -49,6 +49,9 @@
         @include font-primary-heavy;
         font-size: 20px;
         padding: 12px 33px;
+        transition: 1s ease;
+        cursor: pointer;
+
         .jobs-cards-item-button-apply {
           display: flex;
           img {
@@ -56,6 +59,9 @@
             margin-left: 16px;
           }
         }
+      }
+      .jobs-cards-item-button:hover {
+        filter: brightness(80%);
       }
     }
     .jobs-cards-all {
@@ -67,6 +73,11 @@
       @include font-primary-heavy;
       font-size: 20px;
       width: 80%;
+      cursor: pointer;
+      transition: 1s ease;
+    }
+    .jobs-cards-all:hover {
+      background-color: rgb(39, 36, 36);
     }
   }
 }
@@ -77,6 +88,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    .jobs-cards {
+      .jobs-cards-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .jobs-cards-item-title {
+          font-size: 28px;
+          margin-bottom: 0;
+          padding: 32px;
+        }
+      }
+    }
 
     .jobs-header h2 {
       font-size: 90px;
