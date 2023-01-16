@@ -22,6 +22,33 @@
     padding: 0 50px;
     margin-bottom: 100px;
 
+    .gallery-container-hover {
+      display: grid;
+      grid-template-columns: 1fr;
+      position: relative;
+      img {
+        grid-row-start: 1;
+        grid-column-start: 1;
+      }
+
+      .hover {
+        display: none;
+        position: absolute;
+        left: 45%;
+        top: 45%;
+        width: 30px;
+        height: 30px;
+        opacity: 0.5;
+      }
+    }
+
+    .gallery-container-hover:hover {
+      .hover {
+        display: block;
+        z-index: 1000;
+      }
+    }
+
     img {
       background: url("images/gallery/zoom-in.png");
       transition: 1s ease;
