@@ -1,6 +1,12 @@
 .clients-words {
   background-color: #f9fafe;
   padding: 50px 16px;
+  .clients-words-container-outter2,
+  .clients-words-container-outter3,
+  .clients-words-container-outter4,
+  .clients-words-container-outter5 {
+    display: none;
+  }
 
   .clients-words-heading {
     font-size: 48px;
@@ -109,18 +115,22 @@
       }
       .clients-words-container-outter2 {
         animation: text2 25s infinite;
+        display: block;
       }
       .clients-words-container-outter3 {
         animation: text3 25s infinite;
         position: absolute;
+        display: block;
       }
       .clients-words-container-outter4 {
         animation: text4 25s infinite;
         position: absolute;
+        display: block;
       }
       .clients-words-container-outter5 {
         animation: text5 25s infinite;
         position: absolute;
+        display: block;
       }
       .clients-words-container-circle {
         width: 15px;

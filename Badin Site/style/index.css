@@ -395,6 +395,12 @@
   background-color: #f9fafe;
   padding: 50px 16px;
 }
+.clients-words .clients-words-container-outter2,
+.clients-words .clients-words-container-outter3,
+.clients-words .clients-words-container-outter4,
+.clients-words .clients-words-container-outter5 {
+  display: none;
+}
 .clients-words .clients-words-heading {
   font-size: 48px;
   font-family: lust, "Courier", serif;
@@ -508,21 +514,25 @@
   .clients-words .clients-words-container .clients-words-container-outter2 {
     -webkit-animation: text2 25s infinite;
             animation: text2 25s infinite;
+    display: block;
   }
   .clients-words .clients-words-container .clients-words-container-outter3 {
     -webkit-animation: text3 25s infinite;
             animation: text3 25s infinite;
     position: absolute;
+    display: block;
   }
   .clients-words .clients-words-container .clients-words-container-outter4 {
     -webkit-animation: text4 25s infinite;
             animation: text4 25s infinite;
     position: absolute;
+    display: block;
   }
   .clients-words .clients-words-container .clients-words-container-outter5 {
     -webkit-animation: text5 25s infinite;
             animation: text5 25s infinite;
     position: absolute;
+    display: block;
   }
   .clients-words .clients-words-container .clients-words-container-circle {
     width: 15px;
@@ -768,6 +778,28 @@
 .gallery-images .desktop2 {
   display: none;
 }
+.gallery-images .gallery-container-hover {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+.gallery-images .gallery-container-hover img {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+.gallery-images .gallery-container-hover .hover {
+  display: none;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+.gallery-images .gallery-container-hover:hover .hover {
+  display: block;
+  z-index: 1000;
+}
 
 @media only screen and (min-width: 768px) {
   .gallery-images {
@@ -776,28 +808,6 @@
     gap: 50px;
     padding: 0 50px;
     margin-bottom: 100px;
-  }
-  .gallery-images .gallery-container-hover {
-    display: grid;
-    grid-template-columns: 1fr;
-    position: relative;
-  }
-  .gallery-images .gallery-container-hover img {
-    grid-row-start: 1;
-    grid-column-start: 1;
-  }
-  .gallery-images .gallery-container-hover .hover {
-    display: none;
-    position: absolute;
-    left: 45%;
-    top: 45%;
-    width: 30px;
-    height: 30px;
-    opacity: 0.5;
-  }
-  .gallery-images .gallery-container-hover:hover .hover {
-    display: block;
-    z-index: 1000;
   }
   .gallery-images img {
     background: url("images/gallery/zoom-in.png");
