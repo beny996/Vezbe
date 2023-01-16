@@ -165,12 +165,12 @@
     width: 70%;
     position: relative;
     right: -20%;
+    top: -600px;
   }
   .hero .hero-container-right .hero-image-container {
     width: 70%;
     position: relative;
     right: -40%;
-    top: -600px;
   }
   .hero .hero-container-right .hero-image-container .hero-image-container-planet {
     -webkit-animation: flyInImage 1s ease-in;
@@ -196,6 +196,8 @@
 
 @media only screen and (min-width: 768px) {
   .clients {
+    width: 80%;
+    margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 5%;
@@ -1163,22 +1165,22 @@
 }
 @-webkit-keyframes scroll1 {
   from {
-    translate: -210% 0;
+    translate: -300% 0;
   }
 }
 @keyframes scroll1 {
   from {
-    translate: -210% 0;
+    translate: -300% 0;
   }
 }
 @-webkit-keyframes scroll2 {
   to {
-    translate: -210% 0;
+    translate: -300% 0;
   }
 }
 @keyframes scroll2 {
   to {
-    translate: -210% 0;
+    translate: -300% 0;
   }
 }
 @-webkit-keyframes scroll3 {

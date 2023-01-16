@@ -160,12 +160,12 @@
       width: 70%;
       position: relative;
       right: -20%;
+      top: -600px;
 
       .hero-image-container {
         width: 70%;
         position: relative;
         right: -40%;
-        top: -600px;
         .hero-image-container-planet {
           animation: flyInImage 1s ease-in;
         }
