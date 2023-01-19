@@ -10,11 +10,18 @@
   color: #fff;
   cursor: pointer;
 
-  span {
+  .menu-bars-item {
     margin: 2px;
     background-color: #fff;
     width: 2px;
     height: 15px;
     display: inline-block;
   }
+  .black-bars {
+    background-color: #000;
+  }
+}
+
+.black-text {
+  color: #000;
 }

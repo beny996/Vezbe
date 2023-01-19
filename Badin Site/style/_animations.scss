@@ -32,6 +32,12 @@
   }
 }
 
+@keyframes flyInGallery {
+  from {
+    translate: 0 70px;
+  }
+}
+
 @keyframes scroll1 {
   from {
     translate: -300% 0;

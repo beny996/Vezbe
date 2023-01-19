@@ -1,5 +1,6 @@
 .gallery-images {
   padding: 100px 16px;
+  position: relative;
   img {
     width: 100%;
     margin: 16px 0;
@@ -72,8 +73,9 @@
     align-items: flex-end;
     width: 30%;
     gap: 30px;
-    img:not(:last-child) {
+    img:not(.desktop1) {
       width: 90%;
+      margin-left: auto;
     }
   }
   .gallery-container-right {
@@ -81,6 +83,9 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    img {
+      width: 90%;
+    }
   }
   .gallery-container-middle {
     width: 30%;
@@ -89,5 +94,27 @@
     img {
       height: 80%;
     }
+  }
+
+  .move {
+    animation: flyInGallery 1s;
+  }
+
+  .zoomed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#000, 0.5);
+    visibility: hidden;
+    z-index: 1;
+    @include center();
+  }
+
+  .zoomed-image {
+    max-width: 600px;
+    border-radius: 20px;
+    max-height: 800px;
   }
 }
