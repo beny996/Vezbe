@@ -3,6 +3,10 @@
   background-size: cover;
   height: 1000px;
 
+  .hero-container {
+    max-height: 100%;
+  }
+
   .hero-logo {
     animation: flyIn 0.5s ease-in;
     display: flex;
@@ -13,6 +17,14 @@
     img {
       width: 98px;
       height: 35px;
+    }
+
+    .menu-bars-mobile-item {
+      margin: 2px;
+      background-color: #fff;
+      width: 2px;
+      height: 15px;
+      display: inline-block;
     }
   }
 
@@ -171,5 +183,9 @@
         }
       }
     }
+  }
+
+  .menu-bars-mobile {
+    display: none;
   }
 }

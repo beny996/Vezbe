@@ -1,11 +1,29 @@
 .clients-words {
   background-color: #f9fafe;
   padding: 50px 16px;
-  .clients-words-container-outter2,
-  .clients-words-container-outter3,
-  .clients-words-container-outter4,
-  .clients-words-container-outter5 {
-    display: none;
+
+  .outter {
+    opacity: 0;
+  }
+
+  .clients-words-container {
+    display: grid;
+    grid-template-areas: "inner-div";
+    .outter {
+      grid-area: inner-div;
+    }
+  }
+
+  .arrows {
+    position: relative;
+    left: 75%;
+    top: 30px;
+    .image-arrow {
+      width: 30px;
+      background-color: #317ade;
+      border-radius: 25%;
+      margin: 0 10px;
+    }
   }
 
   .clients-words-heading {
@@ -23,10 +41,18 @@
     opacity: 0.8;
   }
 
+  .clients-words-cards::-webkit-scrollbar {
+    display: none;
+  }
+
   .clients-words-cards {
     display: flex;
     align-items: flex-end;
     margin-bottom: 32px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-right: 500px;
+    touch-action: none;
 
     img {
       width: 80px;
@@ -70,10 +96,16 @@
         width: 40%;
       }
     }
+
+    .arrows {
+      display: none;
+    }
     .clients-words-cards {
       position: relative;
       height: 300px;
       width: 350%;
+      overflow: unset;
+      padding-right: 0;
       .clients-words-cards-image {
         img,
         .first {
@@ -115,22 +147,18 @@
       }
       .clients-words-container-outter2 {
         animation: text2 25s infinite;
-        display: block;
       }
       .clients-words-container-outter3 {
         animation: text3 25s infinite;
         position: absolute;
-        display: block;
       }
       .clients-words-container-outter4 {
         animation: text4 25s infinite;
         position: absolute;
-        display: block;
       }
       .clients-words-container-outter5 {
         animation: text5 25s infinite;
         position: absolute;
-        display: block;
       }
       .clients-words-container-circle {
         width: 15px;

@@ -384,3 +384,13 @@
     top: 10%;
   }
 }
+
+@keyframes backToTop {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 60px;
+  }
+}

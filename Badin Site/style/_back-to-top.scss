@@ -1,0 +1,27 @@
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: none;
+  place-items: center;
+  cursor: pointer;
+  animation: backToTop 1s ease;
+  z-index: 10;
+
+  .back-to-top-progress {
+    height: calc((100% - 15px));
+    width: calc(100% - 15px);
+    background-color: #fff;
+    border-radius: 50%;
+    @include center;
+    font-size: 40px;
+    color: #000;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

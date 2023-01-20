@@ -14,6 +14,7 @@
 @import "footer";
 @import "animations";
 @import "menu";
+@import "back-to-top";
 
 * {
   box-sizing: border-box;
@@ -24,4 +25,5 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }

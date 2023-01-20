@@ -36,22 +36,6 @@ const observer2 = new IntersectionObserver(
 
 observer2.observe(document.querySelector(".clients"));
 
-const observer3 = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        bars.forEach((bar) => {
-          bar.classList.remove("black-bars");
-        });
-        menu.classList.remove("black-text");
-      }
-    });
-  },
-  { rootMargin: "20px" }
-);
-
-observer3.observe(document.querySelector(".hero"));
-
 const images = document.querySelectorAll(".image");
 const zoomedImage = document.querySelector(".zoomed-image");
 const zoomedDiv = document.querySelector(".zoomed");
@@ -100,3 +84,89 @@ if (window.innerWidth >= 768) {
     hideArrow();
   });
 }
+
+const observer3 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        menu.classList.add("black-text");
+        bars.forEach((bar) => {
+          bar.classList.add("black-bars");
+        });
+      } else {
+        menu.classList.remove("black-text");
+        bars.forEach((bar) => {
+          bar.classList.remove("black-bars");
+        });
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "-50% 0px",
+  }
+);
+
+observer3.observe(document.querySelector(".hero-container"));
+observer3.observe(document.querySelector(".expertise"));
+
+const imageArrows = document.querySelectorAll(".image-arrow");
+const cardsContainer = document.querySelector(".clients-words-cards");
+const cards = document.querySelectorAll(".clients-words-cards-image > img");
+const paragraph = document.querySelectorAll(".outter");
+
+let currentImageIndex = 0;
+
+cards[0].classList.add("first");
+paragraph[0].style.opacity = 1;
+
+imageArrows[0].addEventListener("click", () => {
+  if (currentImageIndex !== 0) {
+    currentImageIndex--;
+    cards[currentImageIndex + 1].classList.remove("first");
+    cards[currentImageIndex].classList.add("first");
+    paragraph[currentImageIndex + 1].style.opacity = 0;
+    paragraph[currentImageIndex].style.opacity = 1;
+    const slideWidth = cards[currentImageIndex].clientWidth;
+    cardsContainer.scrollLeft -= slideWidth - 35;
+  } else {
+    return;
+  }
+});
+
+imageArrows[1].addEventListener("click", () => {
+  if (currentImageIndex !== cards.length - 1) {
+    currentImageIndex++;
+    cards[currentImageIndex - 1].classList.remove("first");
+    cards[currentImageIndex].classList.add("first");
+    paragraph[currentImageIndex - 1].style.opacity = 0;
+    paragraph[currentImageIndex].style.opacity = 1;
+    currentImage = cards[currentImageIndex];
+    const slideWidth = currentImage.clientWidth;
+    cardsContainer.scrollLeft += slideWidth - 35;
+  } else {
+    return;
+  }
+});
+
+const scrollValue = () => {
+  let progress = document.querySelector(".back-to-top");
+  let position = document.documentElement.scrollTop;
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrollValue = Math.round((position * 100) / calcHeight);
+
+  if (position > 100) {
+    progress.style.display = "grid";
+  } else {
+    progress.style.display = "none";
+  }
+  progress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  progress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #000 ${scrollValue}%)`;
+};
+
+window.onscroll = scrollValue;
+window.onload = scrollValue;
