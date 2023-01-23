@@ -149,7 +149,7 @@ imageArrows[1].addEventListener("click", () => {
   }
 });
 
-const scrollValue = () => {
+const scrollValueCalc = () => {
   let progress = document.querySelector(".back-to-top");
   let position = document.documentElement.scrollTop;
   let calcHeight =
@@ -168,5 +168,26 @@ const scrollValue = () => {
   progress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #000 ${scrollValue}%)`;
 };
 
-window.onscroll = scrollValue;
-window.onload = scrollValue;
+window.onscroll = scrollValueCalc;
+window.onload = scrollValueCalc;
+
+const container = document.querySelector(".container-inner");
+
+menu.addEventListener("mouseover", () => {
+  container.classList.add("shrink");
+});
+
+menu.addEventListener("mouseout", () => {
+  container.classList.remove("shrink");
+});
+
+menu.addEventListener("click", () => {
+  container.classList.add("shrink2");
+  document.body.style.overflow = "hidden";
+});
+
+const closeMenu = document.querySelector(".container-inner-close");
+
+closeMenu.addEventListener("click", () => {
+  container.classList.remove("shrink2");
+});

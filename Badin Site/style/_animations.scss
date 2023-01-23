@@ -394,3 +394,12 @@
     width: 60px;
   }
 }
+
+@keyframes menuTitle {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10px;
+  }
+}

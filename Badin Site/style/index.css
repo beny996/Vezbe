@@ -78,6 +78,7 @@
   padding: 16px 32px;
   cursor: pointer;
   transition: 1s ease;
+  z-index: 1;
 }
 .hero .hero-buttons .hero-buttons-button2 {
   padding: 16px 32px;
@@ -1842,6 +1843,22 @@
     width: 60px;
   }
 }
+@-webkit-keyframes menuTitle {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10px;
+  }
+}
+@keyframes menuTitle {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10px;
+  }
+}
 .menu {
   display: none;
 }
@@ -1849,31 +1866,111 @@
 @media only screen and (min-width: 768px) {
   .menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     position: fixed;
     top: 45%;
     right: 95%;
-    rotate: -90deg;
     cursor: pointer;
     color: #fff;
+    z-index: 1;
+  }
+  .menu .menu-bars {
+    direction: rtl;
   }
   .menu .menu-title {
     display: block;
+    rotate: -90deg;
   }
   .menu .menu-bars-item {
-    margin: 2px;
     background-color: #fff;
-    width: 2px;
-    height: 15px;
-    display: inline-block;
+    width: 15px;
+    height: 2px;
+    margin-bottom: 5px;
+    display: block;
   }
   .menu .black-bars {
     background-color: #000;
   }
+  .menu:hover .first {
+    width: 20px;
+    transition: 0.5s ease;
+  }
+  .menu:hover .second {
+    width: 30px;
+    transition: 0.5s ease;
+  }
+  .menu:hover .menu-title {
+    position: relative;
+    left: 10px;
+    -webkit-animation: menuTitle 0.5s ease;
+            animation: menuTitle 0.5s ease;
+  }
   .black-text {
     color: #000;
+  }
+  .container {
+    background-color: #fff;
+  }
+  .container .container-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container .container-inner .container-inner-buttons {
+    margin-left: -800px;
+    position: fixed;
+  }
+  .container .container-inner .container-inner-buttons .container-inner-buttons-item {
+    font-size: 48px;
+    font-family: futura-pt, "Arial Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .container .container-inner .container-inner-buttons .container-inner-buttons-logo img {
+    width: 98px;
+    height: 35px;
+  }
+  body {
+    background-color: #1f70e0;
+  }
+  .shrink {
+    border-bottom: 50px solid #1f70e0;
+    border-top: 50px solid #1f70e0;
+    border-left: 50px solid #1f70e0;
+    transition: 0.5s ease;
+    height: 85vh;
+  }
+  .container-inner-close {
+    margin-left: -55%;
+    position: fixed;
+    top: 50%;
+    cursor: pointer;
+  }
+  .container-inner-close img {
+    width: 15px;
+    height: 15px;
+  }
+  .shrink2 {
+    border-bottom: 100px solid #1f70e0;
+    border-top: 100px solid #1f70e0;
+    border-left: 1100px solid #1f70e0;
+    border-right: 100px solid #1f70e0;
+    z-index: 50000;
+    padding: 0;
+    overflow: hidden;
+    transition: 1s ease;
+  }
+  .shrink2 .container-inner-item {
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    border-radius: 25px;
+    transition: 1s ease;
+    border-radius: 25px;
   }
 }
 .back-to-top {
