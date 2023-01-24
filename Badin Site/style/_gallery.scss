@@ -4,7 +4,7 @@
   img {
     width: 100%;
     margin: 16px 0;
-    box-shadow: 0 0 20px gray;
+    box-shadow: 0 0 20px $gray;
     border-radius: 25px;
   }
   .desktop1 {
@@ -106,7 +106,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(#000, 0.5);
+    background-color: rgba($black, 0.5);
     visibility: hidden;
     z-index: 11;
     @include center();

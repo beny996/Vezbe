@@ -1,5 +1,5 @@
 .expertise {
-  background-color: #1f70e0;
+  background-color: $badinBlue;
   padding: 50px 16px;
   .mobile {
     display: block;
@@ -7,7 +7,7 @@
   p {
     @include font-secondary-italic;
     font-size: 48px;
-    color: #fff;
+    color: $white;
     width: 70%;
   }
   span {
@@ -15,7 +15,7 @@
     white-space: nowrap;
     @include font-primary-demi;
     margin: 20px 0;
-    color: #fff;
+    color: $white;
     opacity: 0.5;
     padding: 0 30px;
   }

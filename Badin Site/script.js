@@ -1,6 +1,21 @@
 const gallery = document.querySelector(".gallery-images");
+const imageArrows = document.querySelectorAll(".image-arrow");
+const cardsContainer = document.querySelector(".clients-words-cards");
+const cards = document.querySelectorAll(".clients-words-cards-image > img");
+const paragraph = document.querySelectorAll(".outter");
+const menu = document.querySelector(".menu");
+const bars = document.querySelectorAll(".menu-bars-item");
+const images = document.querySelectorAll(".image");
+const zoomedImage = document.querySelector(".zoomed-image");
+const zoomedDiv = document.querySelector(".zoomed");
+const arrows = document.querySelectorAll(".arrow");
+const container = document.querySelector(".container-inner");
+const closeMenu = document.querySelector(".container-inner-close");
+let currentPage = document.querySelector(".first-item");
+const menuItems = document.querySelectorAll(".container-inner-buttons-item");
 
-const observer = new IntersectionObserver((entries) => {
+//Observers
+const galleryObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const left = entry.target.querySelector(".gallery-container-left");
     const right = entry.target.querySelector(".gallery-container-right");
@@ -14,33 +29,33 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-observer.observe(gallery);
-
-const menu = document.querySelector(".menu");
-const bars = document.querySelectorAll(".menu-bars-item");
-
-const observer2 = new IntersectionObserver(
+const menuObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (!entry.isIntersecting) {
+        menu.classList.add("black-text");
         bars.forEach((bar) => {
           bar.classList.add("black-bars");
         });
-        menu.classList.add("black-text");
-        return;
+      } else {
+        menu.classList.remove("black-text");
+        bars.forEach((bar) => {
+          bar.classList.remove("black-bars");
+        });
       }
     });
   },
-  { rootMargin: "-40%" }
+  {
+    root: null,
+    rootMargin: "-50% 0px",
+  }
 );
 
-observer2.observe(document.querySelector(".clients"));
+galleryObserver.observe(gallery);
+menuObserver.observe(document.querySelector(".expertise"));
+menuObserver.observe(document.querySelector(".hero-container"));
 
-const images = document.querySelectorAll(".image");
-const zoomedImage = document.querySelector(".zoomed-image");
-const zoomedDiv = document.querySelector(".zoomed");
-const arrows = document.querySelectorAll(".arrow");
-
+//Gallery
 let imageIndex;
 
 if (window.innerWidth >= 768) {
@@ -85,36 +100,7 @@ if (window.innerWidth >= 768) {
   });
 }
 
-const observer3 = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        menu.classList.add("black-text");
-        bars.forEach((bar) => {
-          bar.classList.add("black-bars");
-        });
-      } else {
-        menu.classList.remove("black-text");
-        bars.forEach((bar) => {
-          bar.classList.remove("black-bars");
-        });
-      }
-    });
-  },
-  {
-    root: null,
-    rootMargin: "-50% 0px",
-  }
-);
-
-observer3.observe(document.querySelector(".hero-container"));
-observer3.observe(document.querySelector(".expertise"));
-
-const imageArrows = document.querySelectorAll(".image-arrow");
-const cardsContainer = document.querySelector(".clients-words-cards");
-const cards = document.querySelectorAll(".clients-words-cards-image > img");
-const paragraph = document.querySelectorAll(".outter");
-
+//Clients words
 let currentImageIndex = 0;
 
 cards[0].classList.add("first");
@@ -141,14 +127,14 @@ imageArrows[1].addEventListener("click", () => {
     cards[currentImageIndex].classList.add("first");
     paragraph[currentImageIndex - 1].style.opacity = 0;
     paragraph[currentImageIndex].style.opacity = 1;
-    currentImage = cards[currentImageIndex];
-    const slideWidth = currentImage.clientWidth;
+    const slideWidth = cards[currentImageIndex].clientWidth;
     cardsContainer.scrollLeft += slideWidth - 35;
   } else {
     return;
   }
 });
 
+//Back to top
 const scrollValueCalc = () => {
   let progress = document.querySelector(".back-to-top");
   let position = document.documentElement.scrollTop;
@@ -165,14 +151,13 @@ const scrollValueCalc = () => {
   progress.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
   });
-  progress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #000 ${scrollValue}%)`;
+  progress.style.background = `conic-gradient(#1f70e0 ${scrollValue}%, #000 ${scrollValue}%)`;
 };
 
 window.onscroll = scrollValueCalc;
 window.onload = scrollValueCalc;
 
-const container = document.querySelector(".container-inner");
-
+//Menu
 menu.addEventListener("mouseover", () => {
   container.classList.add("shrink");
 });
@@ -184,10 +169,27 @@ menu.addEventListener("mouseout", () => {
 menu.addEventListener("click", () => {
   container.classList.add("shrink2");
   document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "unset";
+  document.querySelectorAll("section").forEach((section) => {
+    section.classList.add("blur");
+  });
 });
-
-const closeMenu = document.querySelector(".container-inner-close");
 
 closeMenu.addEventListener("click", () => {
   container.classList.remove("shrink2");
+  document.body.style.cssText = "overflow-x: hidden;";
+  document.documentElement.style.cssText = "overflow-x: hidden;";
+  document.querySelectorAll("section").forEach((section) => {
+    section.classList.remove("blur");
+  });
+});
+
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (!item.classList.contains("first-item")) {
+      currentPage.classList.remove("first-item");
+      item.classList.add("first-item");
+      currentPage = item;
+    }
+  });
 });

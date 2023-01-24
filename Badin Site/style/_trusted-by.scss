@@ -1,11 +1,11 @@
 .trusted-by {
   padding: 50px 0;
-  background-color: #f9fafe;
+  background-color: $backgroundGray;
   .trusted-by-container-title {
     text-align: center;
     @include font-primary-demi;
     font-size: 16px;
-    color: #6b728e;
+    color: $backText;
   }
 
   .trusted-by-container-clients {

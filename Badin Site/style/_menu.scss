@@ -2,6 +2,18 @@
   display: none;
 }
 
+.container-inner-close {
+  display: none;
+}
+
+.container-inner-buttons {
+  display: none;
+}
+
+.container-inner-item {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .menu {
     display: flex;
@@ -12,8 +24,8 @@
     top: 45%;
     right: 95%;
     cursor: pointer;
-    color: #fff;
-    z-index: 1;
+    color: $white;
+    z-index: 16;
 
     .menu-bars {
       direction: rtl;
@@ -25,7 +37,7 @@
     }
 
     .menu-bars-item {
-      background-color: #fff;
+      background-color: $white;
       width: 15px;
       height: 2px;
       margin-bottom: 5px;
@@ -33,7 +45,7 @@
     }
 
     .black-bars {
-      background-color: #000;
+      background-color: $black;
     }
   }
 
@@ -54,26 +66,56 @@
     }
   }
   .black-text {
-    color: #000;
+    color: $black;
   }
 
   .container {
-    background-color: #fff;
+    background-color: $white;
     .container-inner {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      .container-inner-close {
+        margin-left: -5%;
+        position: fixed;
+        top: 50%;
+        display: block;
+        cursor: pointer;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
       .container-inner-buttons {
-        // display: none;
+        display: block;
         margin-left: -800px;
         position: fixed;
+        .first-item {
+          opacity: 1 !important;
+          background: linear-gradient(to bottom, #0f3a75 0%, #0f3a75 100%)
+            no-repeat;
+          background-size: 10%;
+        }
         .container-inner-buttons-item {
           font-size: 48px;
+          color: $white;
+          opacity: 0.6;
+          margin-top: 15px;
+          cursor: pointer;
           @include font-primary-heavy;
         }
+        .container-inner-buttons-item:hover:not(.first-item) {
+          opacity: 0.7;
+          transition: 0.5s ease;
+          background: linear-gradient(to bottom, #0f3a75 0%, #0f3a75 100%)
+            no-repeat;
+          background-size: 10%;
+          animation: background 0.5s ease;
+        }
         .container-inner-buttons-logo {
+          margin-bottom: 50px;
           img {
             width: 98px;
             height: 35px;
@@ -83,47 +125,69 @@
     }
   }
 
-  body {
-    background-color: #1f70e0;
-  }
-
   .shrink {
-    border-bottom: 50px solid #1f70e0;
-    border-top: 50px solid #1f70e0;
-    border-left: 50px solid #1f70e0;
+    border-bottom: 50px solid $badinBlue;
+    border-top: 50px solid $badinBlue;
+    border-left: 50px solid $badinBlue;
     transition: 0.5s ease;
     height: 85vh;
-  }
-  .container-inner-close {
-    margin-left: -55%;
-    position: fixed;
-    top: 50%;
-    cursor: pointer;
-    img {
-      width: 15px;
-      height: 15px;
-    }
+    z-index: 15;
   }
 
   .shrink2 {
-    border-bottom: 100px solid #1f70e0;
-    border-top: 100px solid #1f70e0;
-    border-left: 1100px solid #1f70e0;
-    border-right: 100px solid #1f70e0;
-    z-index: 50000;
-    padding: 0;
-    overflow: hidden;
+    border-bottom: 100px solid $badinBlue;
+    border-top: 100px solid $badinBlue;
+    border-left: 1000px solid $badinBlue;
+    border-right: 100px solid $badinBlue;
+    border-image: linear-gradient(to bottom right, #317ade -10%, #0e3378 50%) 1;
+    z-index: 20;
     transition: 1s ease;
-
     .container-inner-item {
       height: 100%;
-      background-color: #000;
-      opacity: 0.5;
-      border-radius: 25px;
+      background-color: rgba($black, 0.5);
       transition: 1s ease;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      position: relative;
+      gap: 10px;
+      color: $white;
+      @include font-primary-demi;
+      padding: 10px 50px;
+      .container-inner-item-icons {
+        img {
+          margin: 10px;
+          width: 20px;
+        }
+      }
+      .container-inner-item-mail {
+        margin-bottom: 20px;
+      }
     }
+  }
+
+  .blur {
+    filter: blur(3px);
+  }
+
+  .corner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .corner2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .corner3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .corner4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }

@@ -21,7 +21,7 @@
 
     .menu-bars-mobile-item {
       margin: 2px;
-      background-color: #fff;
+      background-color: $white;
       width: 2px;
       height: 15px;
       display: inline-block;
@@ -34,7 +34,7 @@
       animation: flyInTitle 0.9s ease-in;
       @include font-primary-heavy;
       font-size: 48px;
-      color: #fff;
+      color: $white;
       margin-bottom: 32px;
     }
 
@@ -42,7 +42,7 @@
       animation: flyIn 0.9s ease-in;
       @include font-primary-heavy;
       font-size: 22px;
-      color: #fff;
+      color: $white;
       line-height: 1.55;
       opacity: 0.5;
     }
@@ -59,7 +59,7 @@
       background-color: #fff;
       @include font-primary-heavy;
       font-size: 24px;
-      color: #000;
+      color: $black;
       margin-bottom: 16px;
       padding: 16px 32px;
       cursor: pointer;
@@ -72,7 +72,7 @@
       border-radius: 30px;
       border: none;
       background-color: #393939;
-      color: #fff;
+      color: $white;
       @include font-primary-heavy;
       font-size: 24px;
       z-index: 1;

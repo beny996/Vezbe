@@ -3,7 +3,7 @@
   .info-heading h2 {
     font-size: 48px;
     @include font-secondary-italic;
-    color: #22252e;
+    color: $headingText;
     margin-bottom: 32px;
     position: relative;
   }
@@ -27,7 +27,7 @@
     @include font-primary-demi;
     font-size: 40px;
     text-decoration: underline;
-    color: #000;
+    color: $black;
   }
 }
 

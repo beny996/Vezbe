@@ -8,17 +8,17 @@
   display: none;
   place-items: center;
   cursor: pointer;
-  animation: backToTop 1s ease;
+  animation: backToTop 0.5s ease;
   z-index: 10;
 
   .back-to-top-progress {
     height: calc((100% - 15px));
     width: calc(100% - 15px);
-    background-color: #fff;
+    background-color: $white;
     border-radius: 50%;
     @include center;
     font-size: 40px;
-    color: #000;
+    color: $black;
     img {
       width: 20px;
       height: 20px;

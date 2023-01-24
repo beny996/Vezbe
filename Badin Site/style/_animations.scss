@@ -403,3 +403,13 @@
     left: 10px;
   }
 }
+
+@keyframes background {
+  0% {
+    background-size: 0;
+  }
+
+  100% {
+    background-size: 10%;
+  }
+}

@@ -242,7 +242,7 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  box-shadow: 0 0 30px gray;
+  box-shadow: 0 0 30px #808080;
 }
 .why-badin .why-badin-image-hidden {
   text-align: center;
@@ -251,7 +251,7 @@
 .why-badin .why-badin-image-hidden img {
   width: 55%;
   border-radius: 20px;
-  box-shadow: 0 0 20px gray;
+  box-shadow: 0 0 20px #808080;
 }
 
 @media only screen and (min-width: 768px) {
@@ -291,7 +291,7 @@
   .why-badin .why-badin-second .why-badin-second-image img {
     width: 120%;
     border-radius: 20px;
-    box-shadow: 0 0 20px gray;
+    box-shadow: 0 0 20px #808080;
   }
 }
 .offer {
@@ -644,7 +644,7 @@
   font-family: futura-pt, "Arial Condensed", sans-serif;
   font-weight: 600;
   font-style: normal;
-  color: white;
+  color: #fff;
   border-radius: 35px;
   border: none;
   padding: 12px 33px;
@@ -752,7 +752,7 @@
   align-items: center;
 }
 .jobs .jobs-cards .jobs-cards-item {
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px;
   padding: 24px 16px;
   box-shadow: 0 0 20px #f0f1f4;
@@ -764,7 +764,7 @@
   font-weight: 700;
   font-style: normal;
   font-size: 18px;
-  color: #22252e;
+  color: #6b728e;
   margin-bottom: 32px;
 }
 .jobs .jobs-cards .jobs-cards-item .jobs-cards-item-button {
@@ -847,7 +847,7 @@
 .gallery-images img {
   width: 100%;
   margin: 16px 0;
-  box-shadow: 0 0 20px gray;
+  box-shadow: 0 0 20px #808080;
   border-radius: 25px;
 }
 .gallery-images .desktop1 {
@@ -1859,7 +1859,35 @@
     left: 10px;
   }
 }
+@-webkit-keyframes background {
+  0% {
+    background-size: 0;
+  }
+  100% {
+    background-size: 10%;
+  }
+}
+@keyframes background {
+  0% {
+    background-size: 0;
+  }
+  100% {
+    background-size: 10%;
+  }
+}
 .menu {
+  display: none;
+}
+
+.container-inner-close {
+  display: none;
+}
+
+.container-inner-buttons {
+  display: none;
+}
+
+.container-inner-item {
   display: none;
 }
 
@@ -1874,7 +1902,7 @@
     right: 95%;
     cursor: pointer;
     color: #fff;
-    z-index: 1;
+    z-index: 16;
   }
   .menu .menu-bars {
     direction: rtl;
@@ -1920,22 +1948,51 @@
     width: 100%;
     height: 100%;
   }
+  .container .container-inner .container-inner-close {
+    margin-left: -5%;
+    position: fixed;
+    top: 50%;
+    display: block;
+    cursor: pointer;
+  }
+  .container .container-inner .container-inner-close img {
+    width: 15px;
+    height: 15px;
+  }
   .container .container-inner .container-inner-buttons {
+    display: block;
     margin-left: -800px;
     position: fixed;
   }
+  .container .container-inner .container-inner-buttons .first-item {
+    opacity: 1 !important;
+    background: linear-gradient(to bottom, #0f3a75 0%, #0f3a75 100%) no-repeat;
+    background-size: 10%;
+  }
   .container .container-inner .container-inner-buttons .container-inner-buttons-item {
     font-size: 48px;
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 15px;
+    cursor: pointer;
     font-family: futura-pt, "Arial Condensed", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
+  .container .container-inner .container-inner-buttons .container-inner-buttons-item:hover:not(.first-item) {
+    opacity: 0.7;
+    transition: 0.5s ease;
+    background: linear-gradient(to bottom, #0f3a75 0%, #0f3a75 100%) no-repeat;
+    background-size: 10%;
+    -webkit-animation: background 0.5s ease;
+            animation: background 0.5s ease;
+  }
+  .container .container-inner .container-inner-buttons .container-inner-buttons-logo {
+    margin-bottom: 50px;
+  }
   .container .container-inner .container-inner-buttons .container-inner-buttons-logo img {
     width: 98px;
     height: 35px;
-  }
-  body {
-    background-color: #1f70e0;
   }
   .shrink {
     border-bottom: 50px solid #1f70e0;
@@ -1943,34 +2000,62 @@
     border-left: 50px solid #1f70e0;
     transition: 0.5s ease;
     height: 85vh;
-  }
-  .container-inner-close {
-    margin-left: -55%;
-    position: fixed;
-    top: 50%;
-    cursor: pointer;
-  }
-  .container-inner-close img {
-    width: 15px;
-    height: 15px;
+    z-index: 15;
   }
   .shrink2 {
     border-bottom: 100px solid #1f70e0;
     border-top: 100px solid #1f70e0;
-    border-left: 1100px solid #1f70e0;
+    border-left: 1000px solid #1f70e0;
     border-right: 100px solid #1f70e0;
-    z-index: 50000;
-    padding: 0;
-    overflow: hidden;
+    -o-border-image: linear-gradient(to bottom right, #317ade -10%, #0e3378 50%) 1;
+       border-image: linear-gradient(to bottom right, #317ade -10%, #0e3378 50%) 1;
+    z-index: 20;
     transition: 1s ease;
   }
   .shrink2 .container-inner-item {
     height: 100%;
-    background-color: #000;
-    opacity: 0.5;
-    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: 1s ease;
-    border-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    color: #fff;
+    font-family: futura-pt, "Arial Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding: 10px 50px;
+  }
+  .shrink2 .container-inner-item .container-inner-item-icons img {
+    margin: 10px;
+    width: 20px;
+  }
+  .shrink2 .container-inner-item .container-inner-item-mail {
+    margin-bottom: 20px;
+  }
+  .blur {
+    filter: blur(3px);
+  }
+  .corner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .corner2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .corner3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .corner4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 .back-to-top {
@@ -1983,8 +2068,8 @@
   display: none;
   place-items: center;
   cursor: pointer;
-  -webkit-animation: backToTop 1s ease;
-          animation: backToTop 1s ease;
+  -webkit-animation: backToTop 0.5s ease;
+          animation: backToTop 0.5s ease;
   z-index: 10;
 }
 .back-to-top .back-to-top-progress {

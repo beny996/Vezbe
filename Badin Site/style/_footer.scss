@@ -13,7 +13,7 @@
   .footer-beginning {
     font-size: 16px;
     opacity: 0.5;
-    color: #fff;
+    color: $white;
     @include font-primary-medium;
     margin-top: 50px;
   }
@@ -24,7 +24,7 @@
     margin: 50px 0;
 
     .footer-icons-item {
-      background-color: #2c2d3c;
+      background-color: $iconsBackground;
       padding: 10px;
       border-radius: 20px;
       @include center();
@@ -36,7 +36,7 @@
       }
     }
     .footer-icons-item:hover {
-      background-color: #3a3b4d;
+      background-color: $iconsHover;
     }
   }
 
@@ -51,14 +51,14 @@
       .footer-cards-item-heading {
         @include font-primary-heavy;
         font-size: 20px;
-        color: #fff;
+        color: $white;
         margin-bottom: 24px;
       }
 
       .footer-cards-item-link {
         @include font-primary-demi;
         font-size: 16px;
-        color: #fff;
+        color: $white;
         margin-bottom: 10px;
         opacity: 0.5;
         text-decoration: none;
@@ -76,7 +76,7 @@
     p {
       opacity: 0.5;
       @include font-primary-demi;
-      color: #fff;
+      color: $white;
       font-size: 16px;
       white-space: nowrap;
     }
@@ -91,6 +91,7 @@
       flex-grow: 3;
       justify-content: space-between;
       margin: 30px 120px;
+
       .footer-cards {
         display: flex;
         flex-direction: row;
