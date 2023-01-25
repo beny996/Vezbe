@@ -13,6 +13,7 @@ const container = document.querySelector(".container-inner");
 const closeMenu = document.querySelector(".container-inner-close");
 let currentPage = document.querySelector(".first-item");
 const menuItems = document.querySelectorAll(".container-inner-buttons-item");
+const trustedBy = document.querySelectorAll(".trusted-by-desktop img");
 
 //Observers
 const galleryObserver = new IntersectionObserver((entries) => {
@@ -193,3 +194,26 @@ menuItems.forEach((item) => {
     }
   });
 });
+
+//Trusted by
+
+const trustedByArray = Array.from(trustedBy);
+// setInterval(() => {
+//   trustedByArray.forEach((item) => {
+//     item.style.animation = "";
+//     item.style.display = "none";
+//   });
+
+//   const spliced = trustedByArray.splice(0, 5);
+
+//   spliced.forEach((item, index) => {
+//     item.style.animation = `trustedBy${index + 1} 0.5s ease`;
+//     item.style.display = "inline-block";
+//   });
+
+//   trustedByArray.splice(9, 0, ...spliced);
+//   trustedByArray.forEach((item) => {
+//     let klasa = item.className;
+//     console.log(klasa);
+//   });
+// }, 3000);

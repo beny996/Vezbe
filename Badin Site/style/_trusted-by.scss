@@ -8,17 +8,24 @@
     color: $backText;
   }
 
-  .trusted-by-container-clients {
-    animation: scroll3 10s infinite forwards linear;
-    display: flex;
-    img {
-      width: 50%;
+  .trusted-by-animation-container {
+    position: relative;
+    height: 100px;
+    .trusted-by-container-clients {
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation: scroll3 10s infinite forwards linear;
+      display: flex;
+      img {
+        width: 50%;
+      }
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .trusted-by {
+  .mobile {
     display: none;
   }
 }

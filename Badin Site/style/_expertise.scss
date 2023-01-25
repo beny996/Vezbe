@@ -21,11 +21,28 @@
   }
   .expertise-technologies-left {
     display: flex;
-    animation: scroll1 10s infinite linear alternate;
+    animation: scroll1 30s infinite linear alternate;
   }
   .expertise-technologies-right {
     display: flex;
-    animation: scroll2 10s infinite linear alternate;
+    animation: scroll2 30s infinite linear alternate;
+  }
+
+  .expertise-container {
+    position: relative;
+    height: 100px;
+    .left,
+    .left-mobile {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .right,
+    .right-mobile {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }
 
