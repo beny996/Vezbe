@@ -73,6 +73,7 @@
         display: none;
         width: 60%;
         margin-bottom: 30px;
+        position: relative;
       }
       .trusted-by-heading {
         @include font-primary-demi;
