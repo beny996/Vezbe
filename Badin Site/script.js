@@ -208,6 +208,9 @@ menu.addEventListener("click", () => {
   }, 500);
   menuItems.forEach((item, index) => {
     item.style.animation = `menuNavigation 0.${index + 1}s ease`;
+    setTimeout(() => {
+      item.style.animation = "";
+    }, 1600);
   });
 });
 
