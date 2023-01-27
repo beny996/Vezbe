@@ -107,6 +107,7 @@
       overflow: unset;
       padding-right: 0;
       .clients-words-cards-image {
+        pointer-events: none;
         img,
         .first {
           width: 90px;

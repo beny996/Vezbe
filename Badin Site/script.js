@@ -11,6 +11,7 @@ const zoomedDiv = document.querySelector(".zoomed");
 const arrows = document.querySelectorAll(".arrow");
 const container = document.querySelector(".container-inner");
 const closeMenu = document.querySelector(".container-inner-close");
+const navigation = document.querySelector(".container-inner-buttons");
 let currentPage = document.querySelector(".first-item");
 const menuItems = document.querySelectorAll(".container-inner-buttons-item");
 const trustedBy = document.querySelectorAll(".trusted-by-desktop img");
@@ -137,6 +138,32 @@ imageArrows[1].addEventListener("click", () => {
   }
 });
 
+cards.forEach((card, index) => {
+  card.addEventListener("click", () => {
+    if (index > currentImageIndex) {
+      cardsContainer.scrollLeft +=
+        (cards[currentImageIndex].clientWidth - 35) *
+        (index - currentImageIndex);
+      cards[currentImageIndex].classList.remove("first");
+      card.classList.add("first");
+      paragraph[currentImageIndex].style.opacity = 0;
+      paragraph[index].style.opacity = 1;
+      currentImageIndex = index;
+    } else if (index < currentImageIndex) {
+      cardsContainer.scrollLeft -=
+        (cards[currentImageIndex].clientWidth - 35) *
+        (index - currentImageIndex);
+      cards[currentImageIndex].classList.remove("first");
+      card.classList.add("first");
+      paragraph[currentImageIndex].style.opacity = 0;
+      paragraph[index].style.opacity = 1;
+      currentImageIndex = index;
+    } else {
+      return;
+    }
+  });
+});
+
 //Back to top
 const scrollValueCalc = () => {
   let progress = document.querySelector(".back-to-top");
@@ -176,6 +203,12 @@ menu.addEventListener("click", () => {
   document.querySelectorAll("section").forEach((section) => {
     section.classList.add("blur");
   });
+  setTimeout(() => {
+    navigation.style.display = "unset";
+  }, 500);
+  menuItems.forEach((item, index) => {
+    item.style.animation = `menuNavigation 0.${index + 1}s ease`;
+  });
 });
 
 closeMenu.addEventListener("click", () => {
@@ -185,6 +218,7 @@ closeMenu.addEventListener("click", () => {
   document.querySelectorAll("section").forEach((section) => {
     section.classList.remove("blur");
   });
+  navigation.style.display = "none";
 });
 
 menuItems.forEach((item) => {

@@ -525,6 +525,9 @@
     overflow: unset;
     padding-right: 0;
   }
+  .clients-words .clients-words-cards .clients-words-cards-image {
+    pointer-events: none;
+  }
   .clients-words .clients-words-cards .clients-words-cards-image img,
 .clients-words .clients-words-cards .clients-words-cards-image .first {
     width: 90px;
@@ -2100,6 +2103,46 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes menuNavigation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes menuNavigation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .menu {
   display: none;
 }
@@ -2189,6 +2232,8 @@
     display: block;
     margin-left: -800px;
     position: fixed;
+    width: 30%;
+    display: none;
   }
   .container .container-inner .container-inner-buttons .first-item {
     opacity: 1 !important;
@@ -2256,6 +2301,7 @@
   .shrink2 .container-inner-item .container-inner-item-icons img {
     margin: 10px;
     width: 20px;
+    cursor: pointer;
   }
   .shrink2 .container-inner-item .container-inner-item-mail {
     margin-bottom: 20px;
