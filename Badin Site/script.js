@@ -245,7 +245,7 @@ setInterval(() => {
 
   trustedContainer.appendChild(trustedByHeading);
   spliced.forEach((item, index) => {
-    item.style.animation = `trustedBy${index + 1} 1.2s ease-in`;
+    item.style.animation = `trustedBy ${index}.5s ease-in`;
     item.style.display = "inline-block";
     trustedContainer.appendChild(item);
   });
