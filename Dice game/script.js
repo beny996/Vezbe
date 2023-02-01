@@ -125,7 +125,6 @@ store.addEventListener("click", () => {
 });
 
 playAgain.addEventListener("click", () => {
-  gameWinner.style.display = "none";
   gameWinnerWindow.style.display = "none";
   startOver();
 });
