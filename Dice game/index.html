@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice game</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game">
+        <div class="game-player">
+          <div class="game-player-item player-one">
+            <div class="game-player-item-name"></div>
+            <div class="game-player-dice dice-one">
+              <img src="" alt="" />
+            </div>
+            <div class="game-player-item-score score-one">
+              Score : <span></span>
+            </div>
+            <div class="game-player-item-current current-one">
+              Current : <span></span>
+            </div>
+          </div>
+          <div class="game-player-item player-two">
+            <div class="game-player-item-name"></div>
+            <div class="game-player-dice dice-two">
+              <img src="" alt="" />
+            </div>
+            <div class="game-player-item-score score-two">
+              Score : <span></span>
+            </div>
+            <div class="game-player-item-current current-two">
+              Current : <span></span>
+            </div>
+          </div>
+          <div class="game-buttons">
+            <button class="game-buttons-item roll">Roll</button>
+            <button class="game-buttons-item store">Store</button>
+          </div>
+          <div class="game-active-player">
+            <img src="images/left-arrow-line-symbol.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-start">
+        <label for="">Player 1</label
+        ><input
+          type="text"
+          placeholder="Enter your name!"
+          class="input1"
+          required
+        />
+        <label for="">Player 2</label
+        ><input
+          type="text"
+          placeholder="Enter your name!"
+          class="input2"
+          required
+        />
+        <button class="game-start-button">Start!</button>
+        <div class="countdown">
+          <div class="countdown-item"></div>
+        </div>
+      </div>
+      <div class="game-winner">
+        <div class="game-winner-heading">Winner : <span></span></div>
+        <button class="play-again">Play again</button>
+        <button class="new-game">New game</button>
+      </div>
+    </div>
+  </body>
+</html>

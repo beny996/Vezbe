@@ -1,0 +1,171 @@
+.game-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #8fffe4;
+}
+.game-player .game-player-item {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.game-player .game-player-item .game-player-item-name {
+  font-size: 50px;
+  color: #ffe082;
+}
+.game-player .game-player-item .game-player-dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.game-player .game-player-item .game-player-dice img {
+  width: 30%;
+}
+.game-player .game-player-item .game-player-item-score {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  font-size: 50px;
+}
+.game-player .game-player-item .game-player-item-current {
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+  font-size: 50px;
+}
+.game-player .player-one {
+  border-right: 2px solid rgb(43, 43, 90);
+}
+.game-player .game-buttons {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  bottom: 5%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.game-player .game-buttons button {
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ffe082;
+  cursor: pointer;
+}
+.game-player .game-active-player {
+  position: absolute;
+  top: 20px;
+  left: 45%;
+}
+.game-player .game-active-player img {
+  width: 50px;
+}
+
+.game-start {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3b06c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+.game-start label {
+  font-size: 50px;
+  color: #ffe082;
+}
+.game-start input {
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: rgba(82, 46, 240, 0.4) -5px 5px, rgba(71, 9, 240, 0.3) -10px 10px, rgba(43, 15, 204, 0.2) -15px 15px, rgba(77, 50, 197, 0.1) -20px 20px, rgba(45, 16, 170, 0.05) -25px 25px;
+}
+.game-start button {
+  width: 300px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 30px;
+  background-color: #8fffe4;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(82, 46, 240, 0.4) -5px 5px, rgba(71, 9, 240, 0.3) -10px 10px, rgba(43, 15, 204, 0.2) -15px 15px, rgba(77, 50, 197, 0.1) -20px 20px, rgba(45, 16, 170, 0.05) -25px 25px;
+}
+.game-start .countdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.game-start .countdown .countdown-item {
+  width: 50%;
+  height: 50%;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-winner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.8);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+  flex-direction: column;
+}
+.game-winner .game-winner-heading {
+  text-align: center;
+  font-size: 150px;
+  color: #8fffe4;
+}
+.game-winner button {
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.shadow {
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 800;
+  position: relative;
+  margin: 200px auto 0;
+  width: 700px;
+  height: 350px;
+  background: #15202b;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}/*# sourceMappingURL=index.css.map */
