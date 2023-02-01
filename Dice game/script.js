@@ -158,4 +158,9 @@ start.addEventListener("click", () => {
       startMenu.style.display = "none";
     }
   }, 1000);
+  countdownContainer.addEventListener("click", () => {
+    clearInterval(interval);
+    countdownContainer.style.display = "none";
+    startMenu.style.display = "none";
+  });
 });
