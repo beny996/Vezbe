@@ -121,7 +121,6 @@ store.addEventListener("click", () => {
     dicePlayer2.setAttribute("src", "");
     activePlayer = 1;
   }
-  checkForWinner();
 });
 
 playAgain.addEventListener("click", () => {
@@ -132,6 +131,7 @@ playAgain.addEventListener("click", () => {
 newGame.addEventListener("click", () => {
   startMenu.style.display = "flex";
   gameWinnerWindow.style.display = "none";
+  startOver();
 });
 
 start.addEventListener("click", () => {
