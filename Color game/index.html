@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color game</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-name">Player 1</div>
+      </div>
+      <div class="options">
+        <div class="new-name-container">
+          <div class="options-item new-name">New name</div>
+          <div class="name-change-container">
+            <input type="text" />
+            <button>Change name</button>
+          </div>
+        </div>
+        <div class="options-item current-color"></div>
+        <div class="color-picker-container">
+          <div class="options-item color-picker">New color</div>
+          <div class="options-item-container">
+            <div class="options-item-color rgb">RGB</div>
+            <div class="options-item-color hex">HEX</div>
+          </div>
+        </div>
+      </div>
+      <div class="game">
+        <div class="game-item item1"></div>
+        <div class="game-item item2"></div>
+        <div class="game-item item3"></div>
+        <div class="game-item item4"></div>
+        <div class="game-item item5"></div>
+        <div class="game-item item6"></div>
+      </div>
+      <div class="scoreboard">
+        <div class="scoreboard-heading">Scoreboard</div>
+        <table>
+          <tr class="scoreboard-player">
+            <th>Name</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="scoreboard-score">
+            <th>Score</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+      <div class="game-end">
+        <div class="game-end-heading">The game has ended</div>
+        <div class="game-end-score">Your score is : <span></span></div>
+        <button class="game-end-button">Play again</button>
+      </div>
+    </div>
+  </body>
+</html>
