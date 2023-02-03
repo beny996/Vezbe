@@ -10,6 +10,7 @@
   width: 100%;
 }
 .options .options-item {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   width: 200px;
   height: 20px;
   background-color: #32a88d;
