@@ -3,14 +3,14 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: green;
+  background-color: $inputBackground;
   height: 200px;
   padding: 30px;
   gap: 20px;
 
   .heading {
     font-size: 30px;
-    color: #fff;
+    color: $textWhite;
   }
 
   input {
