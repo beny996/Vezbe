@@ -1,0 +1,50 @@
+.meal-details {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(#000, 0.5);
+  width: 100%;
+  height: 100vh;
+
+  color: #fff;
+
+  .meal-details-item {
+    @include center;
+    flex-direction: column;
+    gap: 150px;
+    width: 80%;
+    height: 80%;
+    border-radius: 25px;
+    background-color: rgba(#000, 0.6);
+    z-index: 10;
+
+    .meal-details-item-field {
+      margin: 20px;
+    }
+
+    .youtube {
+      img {
+        width: 50px;
+      }
+    }
+
+    .category {
+      font-size: 20px;
+      margin: 20px;
+    }
+
+    .recipe {
+      overflow-y: scroll;
+      font-size: 20px;
+    }
+  }
+  .meal-details-close {
+    position: relative;
+    top: -35%;
+    left: 2%;
+    cursor: pointer;
+  }
+}

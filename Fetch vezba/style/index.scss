@@ -1,0 +1,11 @@
+@import "config";
+@import "colors";
+@import "input";
+@import "showcase";
+@import "meal-details";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

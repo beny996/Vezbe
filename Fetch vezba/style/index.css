@@ -1,0 +1,110 @@
+.meals-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: green;
+  height: 200px;
+  padding: 30px;
+  gap: 20px;
+}
+.meals-search .heading {
+  font-size: 30px;
+  color: #fff;
+}
+.meals-search input {
+  width: 300px;
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+}
+.meals-search button {
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.showcase .meal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 25%;
+  aspect-ratio: 1/1;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #9acd32;
+}
+.showcase .meal-card img {
+  width: 70%;
+  display: block;
+}
+.showcase .meal-card button {
+  bottom: 10px;
+  width: 150px;
+  height: 30px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.meal-details {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+}
+.meal-details .meal-details-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 150px;
+  width: 80%;
+  height: 80%;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+.meal-details .meal-details-item .meal-details-item-field {
+  margin: 20px;
+}
+.meal-details .meal-details-item .youtube img {
+  width: 50px;
+}
+.meal-details .meal-details-item .category {
+  font-size: 20px;
+  margin: 20px;
+}
+.meal-details .meal-details-item .recipe {
+  overflow-y: scroll;
+  font-size: 20px;
+}
+.meal-details .meal-details-close {
+  position: relative;
+  top: -35%;
+  left: 2%;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=index.css.map */
