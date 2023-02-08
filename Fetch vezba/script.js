@@ -41,7 +41,7 @@ const submitInput = async () => {
               mealDetails.style.display = "flex";
               document.body.style.overflow = "hidden";
             } catch (err) {
-              console.log(err);
+              throw new Error(err);
             }
           });
           mealParagraph.append(image, text, readMore);
@@ -50,17 +50,17 @@ const submitInput = async () => {
         });
       } else {
         const noMeal = document.createElement("p");
-        noMeal.innerHTML = "There is no such meal!";
+        noMeal.innerHTML = "There is no such category!";
         showcase.append(noMeal);
       }
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      throw new Error(err);
     }
 
     inputField.value = "";
   } else {
     const noMeal = document.createElement("p");
-    noMeal.innerHTML = "There is no such meal!";
+    noMeal.innerHTML = "Please enter a category!";
     showcase.append(noMeal);
   }
 };
