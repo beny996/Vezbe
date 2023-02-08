@@ -6,6 +6,7 @@ const mealCategory = document.querySelector(".category");
 const recipe = document.querySelector(".recipe");
 const youtubeLink = document.querySelector("a");
 const closeButton = document.querySelector(".meal-details-close");
+const container = document.querySelector(".container");
 
 const dataFetch = async (value) => {
   return (
