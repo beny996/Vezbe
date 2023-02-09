@@ -8,13 +8,13 @@ const youtubeLink = document.querySelector("a");
 const closeButton = document.querySelector(".meal-details-close");
 const container = document.querySelector(".container");
 
-const dataFetch = async (value) => {
+const getMealsData = async (value) => {
   return (
     await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${value}`)
   ).json();
 };
 
-const mealRecipe = async (value) => {
+const getMealRecipe = async (value) => {
   return (
     await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${value}`)
   ).json();
@@ -24,7 +24,7 @@ const submitInput = async () => {
   showcase.innerHTML = "";
   if (inputField.value.trim()) {
     try {
-      const data = await dataFetch(inputField.value);
+      const data = await getMealsData(inputField.value);
       if (data.meals) {
         data.meals.forEach((meal) => {
           const mealParagraph = document.createElement("p");
@@ -35,7 +35,7 @@ const submitInput = async () => {
           readMore.innerHTML = "Read more";
           readMore.addEventListener("click", async () => {
             try {
-              const data = await mealRecipe(meal.idMeal);
+              const data = await getMealRecipe(meal.idMeal);
               mealCategory.innerHTML = data.meals[0].strCategory;
               recipe.innerHTML = data.meals[0].strInstructions;
               youtubeLink.setAttribute("href", data.meals[0].strYoutube);

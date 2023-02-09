@@ -94,7 +94,7 @@
   margin: 20px;
 }
 .meal-details .meal-details-item .recipe {
-  overflow-y: scroll;
+  overflow-y: auto;
   font-size: 20px;
 }
 .meal-details .meal-details-close {
