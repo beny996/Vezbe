@@ -1,0 +1,60 @@
+.books {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: $books-background;
+  gap: 50px;
+
+  .books-home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    .books-item {
+      width: 80%;
+
+      .best-rating-container {
+        display: flex;
+        gap: 20px;
+
+        .best-rating-container-item {
+          width: 25%;
+          height: 300px;
+          text-align: center;
+          display: none;
+
+          img {
+            width: 100%;
+            height: 80%;
+          }
+          .best-rating-container-item-rating {
+            border-top: 1px solid $book-card-border;
+          }
+        }
+      }
+
+      .most-reviews-container {
+        display: flex;
+        gap: 20px;
+
+        .most-reviews-container-item {
+          width: 25%;
+          height: 300px;
+          text-align: center;
+          display: none;
+
+          img {
+            width: 100%;
+            height: 80%;
+          }
+          .most-reviews-container-item-rating {
+            border-top: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}

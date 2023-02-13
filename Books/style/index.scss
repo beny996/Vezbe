@@ -1,0 +1,17 @@
+@import "config";
+@import "colors";
+@import "header";
+@import "books";
+@import "navigation";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
