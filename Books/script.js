@@ -14,7 +14,7 @@ const singleBookInfo = document.querySelector(".book-info");
 const back = document.querySelector(".book-back");
 const searchInput = document.querySelector(".header-search input");
 const searchButton = document.querySelector(".header-search button");
-const headings = document.querySelectorAll(".books-item-heading");
+const mostReviewsHeading = document.querySelector(".most-reviews-heading");
 
 let allGenres = [];
 let books;
@@ -84,6 +84,10 @@ const showBooks = (books) => {
 };
 
 const search = () => {
+  if (getComputedStyle(allBooks).display === "none") {
+    allBooks.style.display = "flex";
+    homePage.style.display = "none";
+  }
   let searchedBook = books.record.results.filter((book) => {
     return book.title.toLowerCase().includes(searchInput.value);
   });
@@ -124,11 +128,9 @@ window.addEventListener("load", async () => {
     book.genre.includes(randomGenre)
   );
 
-  headings.forEach((heading) => {
-    heading.innerHTML += ` by genre "${randomGenre}"`;
-  });
+  mostReviewsHeading.innerHTML += ` by genre "${randomGenre}"`;
 
-  const highestRatedBooks = [...booksWithGenre].sort((a, b) => {
+  const highestRatedBooks = [...books.record.results].sort((a, b) => {
     return a.rating < b.rating ? 1 : a.rating > b.rating ? -1 : 0;
   });
 
