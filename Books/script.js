@@ -15,6 +15,7 @@ const back = document.querySelector(".book-back");
 const searchInput = document.querySelector(".header-search input");
 const searchButton = document.querySelector(".header-search button");
 const mostReviewsHeading = document.querySelector(".most-reviews-heading");
+const checkbox = document.querySelector(".checkbox");
 
 let allGenres = [];
 let books;
@@ -81,6 +82,12 @@ const showBooks = (books) => {
         singleBookDescription.innerHTML = `Description: </br> </br>${book.desc}`;
       });
   });
+};
+
+const createGenresList = (genre) => {
+  const genreItem = document.createElement("p");
+  genreItem.innerHTML = genre;
+  genres.append(genreItem);
 };
 
 const search = () => {
@@ -155,11 +162,14 @@ window.addEventListener("load", async () => {
     }
   }
 
-  allGenres.sort().forEach((genre) => {
-    const genreItem = document.createElement("p");
-    genreItem.innerHTML = genre;
-    genres.append(genreItem);
-  });
+  allGenres
+    .filter((genre) => {
+      return !genre.toLowerCase().includes("adult", "lgbt", "erotic");
+    })
+    .sort()
+    .forEach((genre) => {
+      createGenresList(genre);
+    });
 });
 
 navigationBooks.addEventListener("click", () => {
@@ -202,5 +212,22 @@ searchButton.addEventListener("click", search);
 searchInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     search();
+  }
+});
+
+checkbox.addEventListener("change", () => {
+  genres.innerHTML = "";
+
+  if (checkbox.checked) {
+    allGenres.sort().forEach((genre) => {
+      createGenresList(genre);
+    });
+  } else {
+    let filteredGenres = allGenres.filter((genre) => {
+      return !genre.toLowerCase().includes("adult", "lgbt", "erotic");
+    });
+    filteredGenres.sort().forEach((genre) => {
+      createGenresList(genre);
+    });
   }
 });
