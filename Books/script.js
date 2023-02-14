@@ -41,7 +41,7 @@ const createCard = (book, category, container) => {
 
   cardImage.setAttribute("src", book.img);
   cardName.innerHTML = book.title;
-  cardRating.innerHTML = book.rating;
+  cardRating.innerHTML = `Rating : ${book.rating}`;
   card.classList.add(`${category}-item`);
   cardName.classList.add(`${category}-item-name`);
   cardRating.classList.add(`${category}-item-rating`);
@@ -89,7 +89,7 @@ const search = () => {
     homePage.style.display = "none";
   }
   let searchedBook = books.record.results.filter((book) => {
-    return book.title.toLowerCase().includes(searchInput.value);
+    return book.title.toLowerCase().includes(searchInput.value.toLowerCase());
   });
   if (searchedBook.length > 0) {
     allBooksItems.innerHTML = "";
