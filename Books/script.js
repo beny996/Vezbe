@@ -155,7 +155,7 @@ window.addEventListener("load", async () => {
     }
   }
 
-  allGenres.forEach((genre) => {
+  allGenres.sort().forEach((genre) => {
     const genreItem = document.createElement("p");
     genreItem.innerHTML = genre;
     genres.append(genreItem);
