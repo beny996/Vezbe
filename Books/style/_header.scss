@@ -4,4 +4,19 @@
   align-items: center;
   width: 100%;
   background-color: $header-gray;
+
+  input {
+    border-radius: 25px;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+  }
+
+  button {
+    border-radius: 25px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+  }
 }

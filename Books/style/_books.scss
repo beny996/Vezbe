@@ -15,8 +15,14 @@
     gap: 50px;
     .books-item {
       width: 80%;
+      margin: 20px 0;
 
-      .best-rating-container {
+      .books-item-heading {
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+      }
+
+      .books-item-container {
         display: flex;
         gap: 20px;
 
@@ -24,7 +30,7 @@
           width: 25%;
           height: 300px;
           text-align: center;
-          display: none;
+          background-color: $card-background;
 
           img {
             width: 100%;
@@ -34,17 +40,12 @@
             border-top: 1px solid $book-card-border;
           }
         }
-      }
-
-      .most-reviews-container {
-        display: flex;
-        gap: 20px;
 
         .most-reviews-container-item {
           width: 25%;
           height: 300px;
           text-align: center;
-          display: none;
+          background-color: $card-background;
 
           img {
             width: 100%;
@@ -55,6 +56,92 @@
           }
         }
       }
+    }
+  }
+  .books-all {
+    display: none;
+    gap: 100px;
+
+    .books-all-genres {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 800px;
+      overflow-y: auto;
+      background-color: $genres-background;
+      margin: 50px;
+      border-radius: 10px;
+
+      p {
+        cursor: pointer;
+      }
+
+      p:hover {
+        background-color: $genre-hover-background;
+      }
+    }
+
+    .books-all-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      width: 100%;
+
+      .books-all-item {
+        width: 50px;
+        text-align: center;
+        width: 25%;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 80%;
+        }
+
+        img:hover {
+          transition: 0.5s ease;
+          filter: brightness(70%);
+        }
+
+        .books-all-item-rating {
+          border-top: 1px solid black;
+        }
+      }
+    }
+  }
+
+  .book {
+    display: none;
+    .book-data {
+      display: flex;
+      align-items: flex-start;
+
+      .book-image {
+        width: fit-content;
+        display: inline-block;
+        margin: 50px;
+      }
+
+      .book-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 50px;
+
+        .book-info-rating {
+          width: 100px;
+        }
+      }
+    }
+
+    .book-back {
+      cursor: pointer;
+    }
+
+    .book-description {
+      margin: 50px;
     }
   }
 }

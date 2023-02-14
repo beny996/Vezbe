@@ -5,6 +5,19 @@
   width: 100%;
   background-color: #666666;
 }
+.header input {
+  border-radius: 25px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+}
+.header button {
+  border-radius: 25px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
 
 .books {
   display: flex;
@@ -24,40 +37,114 @@
 }
 .books .books-home .books-item {
   width: 80%;
+  margin: 20px 0;
 }
-.books .books-home .books-item .best-rating-container {
+.books .books-home .books-item .books-item-heading {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+.books .books-home .books-item .books-item-container {
   display: flex;
   gap: 20px;
 }
-.books .books-home .books-item .best-rating-container .best-rating-container-item {
+.books .books-home .books-item .books-item-container .best-rating-container-item {
   width: 25%;
   height: 300px;
   text-align: center;
-  display: none;
+  background-color: #fff;
 }
-.books .books-home .books-item .best-rating-container .best-rating-container-item img {
+.books .books-home .books-item .books-item-container .best-rating-container-item img {
   width: 100%;
   height: 80%;
 }
-.books .books-home .books-item .best-rating-container .best-rating-container-item .best-rating-container-item-rating {
+.books .books-home .books-item .books-item-container .best-rating-container-item .best-rating-container-item-rating {
   border-top: 1px solid #000;
 }
-.books .books-home .books-item .most-reviews-container {
-  display: flex;
-  gap: 20px;
-}
-.books .books-home .books-item .most-reviews-container .most-reviews-container-item {
+.books .books-home .books-item .books-item-container .most-reviews-container-item {
   width: 25%;
   height: 300px;
   text-align: center;
-  display: none;
+  background-color: #fff;
 }
-.books .books-home .books-item .most-reviews-container .most-reviews-container-item img {
+.books .books-home .books-item .books-item-container .most-reviews-container-item img {
   width: 100%;
   height: 80%;
 }
-.books .books-home .books-item .most-reviews-container .most-reviews-container-item .most-reviews-container-item-rating {
+.books .books-home .books-item .books-item-container .most-reviews-container-item .most-reviews-container-item-rating {
   border-top: 1px solid black;
+}
+.books .books-all {
+  display: none;
+  gap: 100px;
+}
+.books .books-all .books-all-genres {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 800px;
+  overflow-y: auto;
+  background-color: #fff;
+  margin: 50px;
+  border-radius: 10px;
+}
+.books .books-all .books-all-genres p {
+  cursor: pointer;
+}
+.books .books-all .books-all-genres p:hover {
+  background-color: #f1eee9;
+}
+.books .books-all .books-all-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+}
+.books .books-all .books-all-items .books-all-item {
+  width: 50px;
+  text-align: center;
+  width: 25%;
+  cursor: pointer;
+}
+.books .books-all .books-all-items .books-all-item img {
+  width: 100%;
+  height: 80%;
+}
+.books .books-all .books-all-items .books-all-item img:hover {
+  transition: 0.5s ease;
+  filter: brightness(70%);
+}
+.books .books-all .books-all-items .books-all-item .books-all-item-rating {
+  border-top: 1px solid black;
+}
+.books .book {
+  display: none;
+}
+.books .book .book-data {
+  display: flex;
+  align-items: flex-start;
+}
+.books .book .book-data .book-image {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  margin: 50px;
+}
+.books .book .book-data .book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 50px;
+}
+.books .book .book-data .book-info .book-info-rating {
+  width: 100px;
+}
+.books .book .book-back {
+  cursor: pointer;
+}
+.books .book .book-description {
+  margin: 50px;
 }
 
 .navigation {
@@ -68,6 +155,13 @@
 }
 .navigation .navigation-item {
   cursor: pointer;
+  background-color: #666666;
+  width: 100px;
+  text-align: center;
+  border-radius: 25px;
+}
+.navigation .navigation-item:hover {
+  background-color: rgba(102, 102, 102, 0.6);
 }
 
 * {
