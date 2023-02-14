@@ -14,6 +14,7 @@ const singleBookInfo = document.querySelector(".book-info");
 const back = document.querySelector(".book-back");
 const searchInput = document.querySelector(".header-search input");
 const searchButton = document.querySelector(".header-search button");
+const headings = document.querySelectorAll(".books-item-heading");
 
 let allGenres = [];
 let books;
@@ -122,6 +123,10 @@ window.addEventListener("load", async () => {
   let booksWithGenre = books.record.results.filter((book) =>
     book.genre.includes(randomGenre)
   );
+
+  headings.forEach((heading) => {
+    heading.innerHTML += ` by genre "${randomGenre}"`;
+  });
 
   const highestRatedBooks = [...booksWithGenre].sort((a, b) => {
     return a.rating < b.rating ? 1 : a.rating > b.rating ? -1 : 0;
