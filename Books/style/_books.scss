@@ -20,6 +20,7 @@
       .books-item-heading {
         border-bottom: 1px solid black;
         margin-bottom: 20px;
+        font-size: 40px;
       }
 
       .books-item-container {
@@ -28,7 +29,7 @@
 
         .best-rating-container-item {
           width: 25%;
-          height: 300px;
+          height: 400px;
           text-align: center;
           background-color: $card-background;
 
@@ -43,7 +44,7 @@
 
         .most-reviews-container-item {
           width: 25%;
-          height: 300px;
+          height: 400px;
           text-align: center;
           background-color: $card-background;
 
