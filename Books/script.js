@@ -107,6 +107,25 @@ const search = () => {
   searchInput.value = "";
 };
 
+const filterByGenre = () => {
+  document.querySelectorAll(".books-all-genres p").forEach((genre) => {
+    genre.addEventListener("click", () => {
+      currentGenre = genre.innerHTML;
+
+      let filteredBooks = books.record.results.filter((book) =>
+        book.genre.includes(genre.innerHTML)
+      );
+
+      allBooksItems.innerHTML = "";
+      if (genre.innerHTML === "Default") {
+        showBooks(books.record.results);
+      } else {
+        showBooks(filteredBooks);
+      }
+    });
+  });
+};
+
 window.addEventListener("load", async () => {
   try {
     books = await getBooksData();
@@ -180,22 +199,7 @@ navigationBooks.addEventListener("click", () => {
   showBooks(books.record.results);
   search();
 
-  document.querySelectorAll(".books-all-genres p").forEach((genre) => {
-    genre.addEventListener("click", () => {
-      currentGenre = genre.innerHTML;
-
-      let filteredBooks = books.record.results.filter((book) =>
-        book.genre.includes(genre.innerHTML)
-      );
-
-      allBooksItems.innerHTML = "";
-      if (genre.innerHTML === "Default") {
-        showBooks(books.record.results);
-      } else {
-        showBooks(filteredBooks);
-      }
-    });
-  });
+  filterByGenre();
 });
 
 navigationHome.addEventListener("click", () => {
@@ -230,4 +234,6 @@ checkbox.addEventListener("change", () => {
       createGenresList(genre);
     });
   }
+
+  filterByGenre();
 });
