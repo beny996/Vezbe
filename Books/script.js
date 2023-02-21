@@ -121,7 +121,7 @@ const createGenresList = (genre) => {
 
 const search = () => {
   if (searchInput.value) {
-    if (getComputedStyle(allBooks).display === "none") {
+    if (activePage === "Home") {
       allBooks.style.display = "flex";
       homePage.style.display = "none";
     }
