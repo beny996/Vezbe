@@ -296,6 +296,7 @@ navigationBooks.addEventListener("click", () => {
 navigationHome.addEventListener("click", () => {
   checkbox.style.display = "none";
   checkboxLabel.style.display = "none";
+  singleBook.style.display = "none";
   activePage = "Home";
   allBooks.style.display = "none";
   homePage.style.display = "flex";
