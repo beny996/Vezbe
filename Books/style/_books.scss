@@ -32,13 +32,18 @@
           height: 400px;
           text-align: center;
           background-color: $card-background;
+          cursor: pointer;
+          position: relative;
 
           img {
             width: 100%;
-            height: 80%;
+            height: 70%;
           }
           .best-rating-container-item-rating {
             border-top: 1px solid $book-card-border;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
           }
         }
 
@@ -47,13 +52,18 @@
           height: 400px;
           text-align: center;
           background-color: $card-background;
+          cursor: pointer;
+          position: relative;
 
           img {
             width: 100%;
-            height: 80%;
+            height: 70%;
           }
           .most-reviews-container-item-rating {
             border-top: 1px solid black;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
           }
         }
       }
@@ -99,10 +109,11 @@
         height: 400px;
         margin: 20px 0;
         background-color: $card-background;
+        position: relative;
 
         img {
           width: 100%;
-          height: 80%;
+          height: 70%;
         }
 
         img:hover {
@@ -112,6 +123,9 @@
 
         .books-all-item-rating {
           border-top: 1px solid black;
+          position: absolute;
+          bottom: 10px;
+          width: 100%;
         }
       }
     }
@@ -119,14 +133,21 @@
 
   .book {
     display: none;
+    width: 80%;
     .book-data {
       display: flex;
       align-items: flex-start;
 
       .book-image {
-        width: fit-content;
+        width: 250px;
+        height: 400px;
         display: inline-block;
         margin: 50px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .book-info {
