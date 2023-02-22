@@ -291,8 +291,6 @@ navigationBooks.addEventListener("click", () => {
     showBooks(filteredBooks, "books-all-item");
   }
 
-  search();
-
   filterByGenre();
 });
 
