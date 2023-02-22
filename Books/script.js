@@ -121,10 +121,6 @@ const createGenresList = (genre) => {
 
 const search = () => {
   if (searchInput.value) {
-    if (activePage === "Home") {
-      allBooks.style.display = "flex";
-      homePage.style.display = "none";
-    }
     // let searchedBook = books.record.results.filter((book) => {
     // return book.title.toLowerCase().includes(searchInput.value.toLowerCase());
     // });
@@ -140,6 +136,10 @@ const search = () => {
       }
     });
     if (searchedBook.length > 0) {
+      if (activePage === "Home") {
+        allBooks.style.display = "flex";
+        homePage.style.display = "none";
+      }
       allBooksItems.innerHTML = "";
       showBooks(searchedBook, "books-all-item");
     } else {
