@@ -53,7 +53,7 @@ const getBooksData = async () => {
   return (await fetch("./books.json")).json();
 };
 
-const createCard = (book, category, container) => {
+const createCard = (book, category, container, data) => {
   const card = document.createElement("div");
   const cardImage = document.createElement("img");
   const cardName = document.createElement("div");
@@ -61,7 +61,8 @@ const createCard = (book, category, container) => {
 
   cardImage.setAttribute("src", book.img || "./images/book.jpg");
   cardName.innerHTML = book.title;
-  cardRating.innerHTML = `Rating : ${book.rating}`;
+  cardRating.innerHTML =
+    data === "rating" ? `Rating : ${book.rating}` : `Reviews : ${book.reviews}`;
   card.classList.add(`${category}-item`);
   cardName.classList.add(`${category}-item-name`);
   cardRating.classList.add(`${category}-item-rating`);
@@ -108,7 +109,7 @@ const showBookInfo = (book, index, container) => {
 const showBooks = (books, container) => {
   allBooksItems.innerHTML = "";
   books.forEach((book, index) => {
-    createCard(book, "books-all", allBooksItems);
+    createCard(book, "books-all", allBooksItems, "rating");
     showBookInfo(book, index, container);
   });
 };
@@ -250,7 +251,8 @@ window.addEventListener("load", async () => {
       createCard(
         highestRatedBooks[i],
         "best-rating-container",
-        bestRatingContainer
+        bestRatingContainer,
+        "rating"
       );
       showBookInfo(highestRatedBooks[i], i, "best-rating-container-item");
     }
@@ -258,7 +260,8 @@ window.addEventListener("load", async () => {
       createCard(
         mostReviewsBooks[i],
         "most-reviews-container",
-        mostReviewsContainer
+        mostReviewsContainer,
+        "reviews"
       );
       showBookInfo(mostReviewsBooks[i], i, "most-reviews-container-item");
     }
