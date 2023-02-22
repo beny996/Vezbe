@@ -128,7 +128,10 @@ const search = () => {
     // let searchedBook = books.record.results.filter((book) => {
     // return book.title.toLowerCase().includes(searchInput.value.toLowerCase());
     // });
-    let searchedBook = books.results.filter((book) => {
+
+    let booksToFilter = checkbox.checked ? books.results : filteredBooks;
+
+    let searchedBook = booksToFilter.filter((book) => {
       if (book.title) {
         return book.title
           .toString()
