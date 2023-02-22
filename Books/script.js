@@ -340,6 +340,4 @@ checkbox.addEventListener("change", () => {
       createGenresList(genre);
     });
   }
-
-  filterByGenre();
 });
