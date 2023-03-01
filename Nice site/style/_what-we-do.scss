@@ -1,0 +1,40 @@
+.what-we-do {
+  position: relative;
+  &-top {
+    background-image: linear-gradient(#d3b1f4, #fbc6d9);
+    width: 100%;
+    height: 460px;
+  }
+
+  &-bottom {
+    width: 100%;
+    height: 1000px;
+    background-color: $whatWeDoBackground;
+  }
+
+  &-content {
+    position: absolute;
+
+    .ball {
+      width: 150px;
+    }
+
+    .half-ring {
+      width: 180px;
+    }
+
+    .box {
+      width: 150px;
+    }
+
+    .curl {
+      height: 200px;
+      width: 60px;
+      rotate: 90deg;
+    }
+  }
+
+  &-content-card {
+    background-color: $whatWeDoCardBackground;
+  }
+}

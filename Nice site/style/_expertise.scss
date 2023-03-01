@@ -1,0 +1,54 @@
+.expertise {
+  &-container {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      margin: 40px 0;
+      img {
+        width: 120px;
+      }
+
+      &-heading {
+        color: $expertiseFont;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 20px 5px;
+      }
+
+      &-content {
+        line-height: 1.8;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &-heading {
+    width: 75%;
+    font-size: 30px;
+    color: $expertiseFont;
+    font-weight: 700;
+    margin: 30px auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .expertise {
+    &-heading {
+      width: 50%;
+      font-size: 48px;
+    }
+    &-container {
+      &-item {
+        flex-direction: row;
+        gap: 30px;
+      }
+    }
+  }
+}

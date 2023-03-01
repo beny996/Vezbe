@@ -1,0 +1,37 @@
+.header {
+  background: url("../images/header-background.jpg");
+  background-size: cover;
+
+  img {
+    width: 150px;
+  }
+
+  &-buttons {
+    width: 80%;
+    border-radius: 50px;
+    background-image: linear-gradient(#b47aec, #702bb1);
+    margin: auto;
+    padding: 25px 12px;
+    text-align: center;
+
+    &-item {
+      display: inline-block;
+      font-size: 20px;
+      padding: 0 15px;
+      color: $headerFont;
+      cursor: pointer;
+    }
+
+    &-item:not(:last-child) {
+      border-right: 1px solid #fff;
+    }
+  }
+
+  &-heading {
+    font-size: 30px;
+    font-weight: 800;
+    color: $headerFont;
+    text-align: center;
+    text-shadow: 2px 2px 13px rgb(112 43 177 / 45%);
+  }
+}
