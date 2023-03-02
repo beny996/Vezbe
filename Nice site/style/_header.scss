@@ -13,6 +13,7 @@
     margin: auto;
     padding: 25px 12px;
     text-align: center;
+    animation: headerMid 1s ease;
 
     &-item {
       display: inline-block;
@@ -33,5 +34,79 @@
     color: $headerFont;
     text-align: center;
     text-shadow: 2px 2px 13px rgb(112 43 177 / 45%);
+    width: 250px;
+    margin: 0 auto;
+    animation: headerMid 1s ease;
+  }
+
+  &-top {
+    margin-bottom: 100px;
+
+    .header-curl {
+      width: 150px;
+      height: 270px;
+      position: relative;
+      top: 100px;
+      left: 50px;
+      animation: headerLeft 1s ease;
+    }
+
+    .header-ball {
+      width: 160px;
+      position: relative;
+      left: 50px;
+      animation: headerBall 1s ease;
+    }
+  }
+
+  &-bottom {
+    .header-half-ring {
+      width: 200px;
+      position: relative;
+      left: 100px;
+      animation: headerLeft 1s ease;
+    }
+
+    .header-ring {
+      animation: headerRight 1s ease;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    &-heading {
+      width: 40%;
+      font-size: 96px;
+      margin-top: -150px;
+    }
+
+    &-buttons {
+      width: 40%;
+      margin: 50px auto;
+    }
+
+    &-top {
+      .header-curl {
+        left: 20%;
+      }
+
+      .header-ball {
+        left: 60%;
+      }
+    }
+
+    &-bottom {
+      padding-bottom: 100px;
+
+      .header-half-ring {
+        left: 20%;
+      }
+
+      .header-ring {
+        position: relative;
+        left: 60%;
+      }
+    }
   }
 }

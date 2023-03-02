@@ -5,20 +5,22 @@
   &-top-images {
     margin: 0 30px;
     .image1 {
-      width: 100px;
+      position: relative;
+      left: 30px;
+      width: 80px;
       margin-right: 40%;
     }
 
     .image2 {
       position: relative;
       top: 50px;
-      width: 80px;
+      height: 140px;
       rotate: 90deg;
     }
   }
 
   > img {
-    width: 200px;
+    width: 180px;
     position: relative;
     right: -200px;
     margin-top: 50px;
@@ -27,11 +29,12 @@
   &-card {
     background-color: $designCardBackground;
     border-radius: 25px;
-    width: 70%;
+    width: 65%;
     margin-left: 40px;
     padding: 40px 20px;
     position: relative;
     top: -70px;
+    left: 20px;
 
     &-heading {
       color: $designHeading;
@@ -74,5 +77,76 @@
     position: relative;
     left: 60px;
     width: 130px;
+  }
+}
+
+.ball-animation {
+  animation: designBall 1s ease;
+}
+
+.cube-animation {
+  animation: designCube 1s ease-in;
+}
+
+.curl-animation {
+  animation: designCurl 1s ease;
+}
+
+.card-animation {
+  animation: designCard 1s ease;
+}
+
+.ring-animation {
+  animation: designRing 1s ease;
+}
+
+.half-ring-animation {
+  animation: designHalfRing 1s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .design {
+    &-card {
+      width: 550px;
+      margin-left: 150px;
+
+      &-heading {
+        font-size: 48px;
+        margin-top: 80px;
+      }
+
+      &-button {
+        margin-bottom: 80px;
+      }
+    }
+    .ring {
+      width: 300px;
+      left: 400px;
+    }
+
+    .half-ring {
+      width: 220px;
+      left: 600px;
+      top: -500px;
+    }
+
+    &-top-images {
+      .image1 {
+        width: 120px;
+        position: relative;
+        left: 200px;
+      }
+
+      .image2 {
+        width: 120px;
+        top: 400px;
+        left: 300px;
+      }
+    }
+
+    > img {
+      width: 250px;
+      right: -600px;
+    }
   }
 }

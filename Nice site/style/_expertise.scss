@@ -4,13 +4,19 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+
+    &-right {
+      position: relative;
+    }
+
     &-item {
-      max-width: 450px;
+      max-width: 480px;
       display: flex;
       flex-direction: column;
       margin: 40px 0;
       img {
         width: 120px;
+        position: relative;
       }
 
       &-heading {
@@ -19,11 +25,13 @@
         font-weight: 700;
         text-transform: uppercase;
         margin: 20px 5px;
+        position: relative;
       }
 
       &-content {
         line-height: 1.8;
         font-size: 20px;
+        position: relative;
       }
     }
   }
@@ -38,16 +46,29 @@
   }
 }
 
+.heading-animation {
+  animation: expertiseHeading 1s ease;
+}
+
+.image-animation {
+  animation: expertiseImage 1s ease;
+}
+
+.text-animation {
+  animation: expertiseText 1s ease;
+}
+
 @media only screen and (min-width: 768px) {
   .expertise {
     &-heading {
-      width: 50%;
+      width: 35%;
       font-size: 48px;
     }
     &-container {
       &-item {
         flex-direction: row;
         gap: 30px;
+        margin: 0 auto;
       }
     }
   }

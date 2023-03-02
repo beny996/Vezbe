@@ -1,0 +1,149 @@
+@keyframes headerLeft {
+  from {
+    left: -10%;
+    scale: 0.7;
+    opacity: 0.5;
+  }
+}
+
+@keyframes headerRight {
+  from {
+    left: 80%;
+    scale: 0.7;
+    opacity: 0.5;
+  }
+}
+
+@keyframes headerBall {
+  from {
+    rotate: 180deg;
+    opacity: 0.5;
+    scale: 0.5;
+  }
+}
+
+@keyframes headerMid {
+  from {
+    scale: 0.3;
+    opacity: 0.3;
+  }
+}
+
+@keyframes expertiseHeading {
+  from {
+    opacity: 0.5;
+    scale: 1.8;
+  }
+}
+
+@keyframes expertiseImage {
+  from {
+    left: -500px;
+    opacity: 0.5;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes expertiseText {
+  from {
+    right: -500px;
+    opacity: 0.5;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes testimonialsCircle {
+  from {
+    left: 90%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes testimonialsImage1 {
+  from {
+    left: -200px;
+    opacity: 0.5;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes testimonialsImage2 {
+  from {
+    scale: 0.5;
+    opacity: 0.5;
+  }
+}
+
+@keyframes testimonialsCard1 {
+  from {
+    top: -200px;
+    opacity: 0.5;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes testimonialsCard2 {
+  from {
+    top: 200px;
+    opacity: 0.5;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes designBall {
+  from {
+    left: 0;
+    opacity: 0.5;
+  }
+}
+
+@keyframes designCube {
+  from {
+    scale: 1.8;
+    opacity: 0.5;
+  }
+}
+
+@keyframes designCurl {
+  from {
+    left: 800px;
+    scale: 1.5;
+    opacity: 0.5;
+  }
+}
+
+@keyframes designHalfRing {
+  from {
+    rotate: 180deg;
+    opacity: 0.5;
+  }
+}
+
+@keyframes designRing {
+  from {
+    top: 400px;
+  }
+}
+
+@keyframes designCard {
+  from {
+    left: -200px;
+    opacity: 0.5;
+  }
+}
