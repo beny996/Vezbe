@@ -137,7 +137,7 @@
 
 @keyframes designRing {
   from {
-    top: 400px;
+    top: 100px;
   }
 }
 
@@ -145,5 +145,68 @@
   from {
     left: -200px;
     opacity: 0.5;
+  }
+}
+
+@keyframes whatWeDoBall {
+  from {
+    scale: 1.2;
+    opacity: 0.5;
+    left: 0;
+  }
+}
+
+@keyframes whatWeDoHalfRing {
+  from {
+    top: -300px;
+    left: 1000px;
+    opacity: 0;
+  }
+}
+
+@keyframes whatWeDoCard {
+  from {
+    margin-left: 300px;
+    opacity: 0;
+  }
+}
+
+@keyframes whatWeDoCurl {
+  from {
+    top: 700px;
+    opacity: 0;
+  }
+}
+
+@keyframes whatWeDoBox {
+  from {
+    left: -50px;
+    rotate: 180deg;
+    opacity: 0;
+  }
+}
+
+@keyframes teamCardRotate {
+  from {
+    rotate: 90deg;
+    opacity: 0.5;
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes teamCardFlyIn {
+  from {
+    scale: 0.5;
+    opacity: 0.5;
+    left: 80%;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+    left: 0;
   }
 }

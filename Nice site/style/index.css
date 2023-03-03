@@ -120,13 +120,68 @@
 }
 @keyframes designRing {
   from {
-    top: 400px;
+    top: 100px;
   }
 }
 @keyframes designCard {
   from {
     left: -200px;
     opacity: 0.5;
+  }
+}
+@keyframes whatWeDoBall {
+  from {
+    scale: 1.2;
+    opacity: 0.5;
+    left: 0;
+  }
+}
+@keyframes whatWeDoHalfRing {
+  from {
+    top: -300px;
+    left: 1000px;
+    opacity: 0;
+  }
+}
+@keyframes whatWeDoCard {
+  from {
+    margin-left: 300px;
+    opacity: 0;
+  }
+}
+@keyframes whatWeDoCurl {
+  from {
+    top: 700px;
+    opacity: 0;
+  }
+}
+@keyframes whatWeDoBox {
+  from {
+    left: -50px;
+    rotate: 180deg;
+    opacity: 0;
+  }
+}
+@keyframes teamCardRotate {
+  from {
+    rotate: 90deg;
+    opacity: 0.5;
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes teamCardFlyIn {
+  from {
+    scale: 0.5;
+    opacity: 0.5;
+    left: 80%;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+    left: 0;
   }
 }
 .navbar {
@@ -557,7 +612,7 @@
   }
 }
 .what-we-do {
-  position: relative;
+  height: 800px;
 }
 .what-we-do-top {
   background-image: linear-gradient(#d3b1f4, #fbc6d9);
@@ -565,29 +620,206 @@
   height: 460px;
 }
 .what-we-do-bottom {
+  position: relative;
+  top: -930px;
   width: 100%;
-  height: 1000px;
+  height: 900px;
+  z-index: -1;
   background-color: #fff6ef;
 }
 .what-we-do-content {
-  position: absolute;
+  height: 700px;
+  position: relative;
+  top: -30px;
 }
 .what-we-do-content .ball {
+  position: absolute;
+  top: -400px;
+  left: 250px;
   width: 150px;
 }
 .what-we-do-content .half-ring {
-  width: 180px;
+  position: absolute;
+  top: -200px;
+  left: 70px;
+  width: 220px;
+  rotate: 30deg;
+  z-index: 2;
 }
 .what-we-do-content .box {
+  position: absolute;
+  top: 380px;
+  left: 50px;
   width: 150px;
 }
 .what-we-do-content .curl {
+  position: absolute;
+  top: 450px;
+  left: 250px;
   height: 200px;
   width: 60px;
   rotate: 90deg;
 }
+.what-we-do .what-we-do-box-animation {
+  animation: whatWeDoBox 1s ease;
+}
+.what-we-do .what-we-do-curl-animation {
+  animation: whatWeDoCurl 1s ease;
+}
+.what-we-do .what-we-do-card-animation {
+  animation: whatWeDoCard 1s ease;
+}
+.what-we-do .what-we-do-ball-animation {
+  animation: whatWeDoBall 1s ease;
+}
+.what-we-do .what-we-do-half-ring-animation {
+  animation: whatWeDoHalfRing 1s ease;
+}
 .what-we-do-content-card {
+  position: absolute;
+  top: -180px;
   background-color: #fff;
+  width: 75%;
+  margin-left: 70px;
+  border-radius: 25px;
+  padding: 20px;
+}
+.what-we-do-content-card-heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: #702bb1;
+  margin: 150px 0 30px 0;
+}
+.what-we-do-content-card-content {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+.what-we-do-content-card-button {
+  background-color: #702bb1;
+  border-radius: 15px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  padding: 18px 38px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .what-we-do-content-card {
+    left: 650px;
+    width: 40%;
+  }
+  .what-we-do-content-card-heading {
+    font-size: 48px;
+  }
+  .what-we-do-content .ball {
+    width: 280px;
+    top: -200px;
+  }
+  .what-we-do-content .half-ring {
+    left: 700px;
+    width: 250px;
+  }
+  .what-we-do-content .box {
+    width: 180px;
+    left: 100px;
+  }
+  .what-we-do-content .curl {
+    width: 120px;
+    height: 300px;
+    left: 750px;
+  }
+}
+.team {
+  background: url("../images/team-background.jpg");
+  background-size: cover;
+  position: relative;
+  top: 300px;
+}
+.team-cards {
+  padding: 200px 0;
+  display: flex;
+  flex-direction: column;
+}
+.team-cards .first {
+  border-bottom: 1px solid #ff0000;
+}
+.team-cards-item {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 15px;
+  width: 80%;
+  margin: auto;
+}
+.team-cards-item-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #702bb1;
+}
+.team-cards-item-content {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.team-cards-item-icons {
+  margin-top: 50px;
+}
+.team-cards-item-icons img {
+  cursor: pointer;
+  padding: 0 10px;
+  width: 50px;
+}
+.team .team-card-fly-in-animation {
+  animation: teamCardFlyIn 1s ease;
+}
+.team .team-card-rotate-animation {
+  animation: teamCardRotate 1s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .team-cards {
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 0;
+  }
+  .team-cards .first {
+    border: none;
+  }
+  .team-cards-item {
+    height: 350px;
+  }
+  .team-cards-item-heading {
+    font-size: 48px;
+  }
+}
+.menu {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 100vh;
+  width: 300px;
+  z-index: 10;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 200;
+}
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+}
+.menu-item:hover {
+  opacity: 0.7;
+}
+.menu .close img {
+  width: 20px;
+  height: 20px;
+  margin-left: 200px;
 }
 
 * {

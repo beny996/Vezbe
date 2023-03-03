@@ -1,5 +1,5 @@
 .what-we-do {
-  position: relative;
+  height: 800px;
   &-top {
     background-image: linear-gradient(#d3b1f4, #fbc6d9);
     width: 100%;
@@ -7,34 +7,138 @@
   }
 
   &-bottom {
+    position: relative;
+    top: -930px;
     width: 100%;
-    height: 1000px;
+    height: 900px;
+    z-index: -1;
     background-color: $whatWeDoBackground;
   }
 
   &-content {
-    position: absolute;
-
+    height: 700px;
+    position: relative;
+    top: -30px;
     .ball {
+      position: absolute;
+      top: -400px;
+      left: 250px;
       width: 150px;
     }
 
     .half-ring {
-      width: 180px;
+      position: absolute;
+      top: -200px;
+      left: 70px;
+      width: 220px;
+      rotate: 30deg;
+      z-index: 2;
     }
 
     .box {
+      position: absolute;
+      top: 380px;
+      left: 50px;
       width: 150px;
     }
 
     .curl {
+      position: absolute;
+      top: 450px;
+      left: 250px;
       height: 200px;
       width: 60px;
       rotate: 90deg;
     }
   }
 
+  .what-we-do-box-animation {
+    animation: whatWeDoBox 1s ease;
+  }
+
+  .what-we-do-curl-animation {
+    animation: whatWeDoCurl 1s ease;
+  }
+
+  .what-we-do-card-animation {
+    animation: whatWeDoCard 1s ease;
+  }
+
+  .what-we-do-ball-animation {
+    animation: whatWeDoBall 1s ease;
+  }
+
+  .what-we-do-half-ring-animation {
+    animation: whatWeDoHalfRing 1s ease;
+  }
+
   &-content-card {
+    position: absolute;
+    top: -180px;
     background-color: $whatWeDoCardBackground;
+    width: 75%;
+    margin-left: 70px;
+    border-radius: 25px;
+    padding: 20px;
+
+    &-heading {
+      font-size: 30px;
+      font-weight: 700;
+      color: $whatWeDoHeading;
+      margin: 150px 0 30px 0;
+    }
+
+    &-content {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 50px;
+    }
+
+    &-button {
+      background-color: $whatWeDoButtonBackground;
+      border-radius: 15px;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $whatWeDoFont;
+      padding: 18px 38px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .what-we-do {
+    &-content-card {
+      left: 650px;
+      width: 40%;
+
+      &-heading {
+        font-size: 48px;
+      }
+    }
+
+    &-content {
+      .ball {
+        width: 280px;
+        top: -200px;
+      }
+
+      .half-ring {
+        left: 700px;
+        width: 250px;
+      }
+
+      .box {
+        width: 180px;
+        left: 100px;
+      }
+
+      .curl {
+        width: 120px;
+        height: 300px;
+        left: 750px;
+      }
+    }
   }
 }

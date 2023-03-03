@@ -15,6 +15,21 @@ const designCube = document.querySelector(".design .cube");
 const designRing = document.querySelector(".design .ring");
 const desingHalfRing = document.querySelector(".design .half-ring");
 const designCard = document.querySelector(".design-card");
+const whatWeDo = document.querySelector(".what-we-do");
+const whatWeDoHalfRing = document.querySelector(
+  ".what-we-do-content .half-ring"
+);
+const whatWeDoBall = document.querySelector(".what-we-do-content .ball");
+const whatWeDoCard = document.querySelector(".what-we-do-content-card");
+const whatWeDoBox = document.querySelector(".what-we-do-content .box");
+const whatWeDoCurl = document.querySelector(".what-we-do-content .curl");
+const team = document.querySelector(".team");
+const teamFirstCard = document.querySelector(".team .first");
+const teamSecondCard = document.querySelector(".team .second");
+const container = document.querySelector(".container");
+const menuBars = document.querySelector(".navbar-menu");
+const menuClose = document.querySelector(".close");
+const menu = document.querySelector(".menu");
 
 const expertiseObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -93,6 +108,46 @@ const designObserver = new IntersectionObserver((entries) => {
   });
 });
 
+const whatWeDoObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      whatWeDoBall.classList.add("what-we-do-ball-animation");
+      whatWeDoBox.classList.add("what-we-do-box-animation");
+      whatWeDoCard.classList.add("what-we-do-card-animation");
+      whatWeDoCurl.classList.add("what-we-do-curl-animation");
+      whatWeDoHalfRing.classList.add("what-we-do-half-ring-animation");
+    } else {
+      whatWeDoBall.classList.remove("what-we-do-ball-animation");
+      whatWeDoBox.classList.remove("what-we-do-box-animation");
+      whatWeDoCard.classList.remove("what-we-do-card-animation");
+      whatWeDoCurl.classList.remove("what-we-do-curl-animation");
+      whatWeDoHalfRing.classList.remove("what-we-do-half-ring-animation");
+    }
+  });
+});
+
+const teamObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      teamFirstCard.classList.add("team-card-rotate-animation");
+      teamSecondCard.classList.add("team-card-fly-in-animation");
+    } else {
+      teamFirstCard.classList.remove("team-card-rotate-animation");
+      teamSecondCard.classList.remove("team-card-fly-in-animation");
+    }
+  });
+});
+
 expertiseObserver.observe(expertise);
 testimonialsObserver.observe(testimonials);
 designObserver.observe(design);
+teamObserver.observe(team);
+whatWeDoObserver.observe(whatWeDo);
+
+menuBars.addEventListener("click", () => {
+  menu.style.visibility = "unset";
+});
+
+menuClose.addEventListener("click", () => {
+  menu.style.visibility = "hidden";
+});
