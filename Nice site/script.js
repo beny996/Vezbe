@@ -30,6 +30,20 @@ const container = document.querySelector(".container");
 const menuBars = document.querySelector(".navbar-menu");
 const menuClose = document.querySelector(".close");
 const menu = document.querySelector(".menu");
+const form = document.querySelector(".form");
+const formBall = document.querySelector(".form-container-bottom .ball");
+const formCurl = document.querySelector(".form-container-bottom .curl");
+const formBottomHalfRing = document.querySelector(
+  ".form-container-bottom .half-ring"
+);
+const formTopHalfRing = document.querySelector(
+  ".form-container-top .half-ring"
+);
+const formTopBackground = document.querySelector(
+  ".form-container-top .background"
+);
+
+const formTopRing = document.querySelector(".form-container-top .ring");
 
 const expertiseObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -138,6 +152,26 @@ const teamObserver = new IntersectionObserver((entries) => {
   });
 });
 
+const formObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      formTopBackground.classList.add("form-background-animation");
+      formTopHalfRing.classList.add("form-top-half-ring-animation");
+      formTopRing.classList.add("form-ring-animation");
+      formBall.classList.add("form-ball-animation");
+      formCurl.classList.add("form-curl-animation");
+      formBottomHalfRing.classList.add("form-bottom-half-ring-animation");
+    } else {
+      formTopBackground.classList.remove("form-background-animation");
+      formTopHalfRing.classList.remove("form-top-half-ring-animation");
+      formTopRing.classList.remove("form-ring-animation");
+      formBall.classList.remove("form-ball-animation");
+      formCurl.classList.remove("form-curl-animation");
+      formBottomHalfRing.classList.remove("form-bottom-half-ring-animation");
+    }
+  });
+});
+
 expertiseObserver.observe(expertise);
 testimonialsObserver.observe(testimonials);
 designObserver.observe(design);
@@ -151,3 +185,4 @@ menuBars.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
   menu.style.visibility = "hidden";
 });
+formObserver.observe(form);

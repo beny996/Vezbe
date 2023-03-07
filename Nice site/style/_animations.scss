@@ -210,3 +210,46 @@
     left: 0;
   }
 }
+
+@keyframes formTopHalfRing {
+  from {
+    left: 0;
+    opacity: 0.5;
+  }
+}
+
+@keyframes formBackground {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+@keyframes formRing {
+  from {
+    top: 400px;
+    opacity: 0;
+  }
+}
+
+@keyframes formBottomHalfRing {
+  from {
+    rotate: 360deg;
+    opacity: 0.5;
+  }
+}
+
+@keyframes formBall {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+@keyframes formCurl {
+  from {
+    left: 100px;
+    scale: 1.5;
+    opacity: 0.5;
+  }
+}

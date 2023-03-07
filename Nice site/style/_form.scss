@@ -5,20 +5,29 @@
     &-top {
       height: 300px;
       overflow: hidden;
+      position: relative;
 
       .ring {
-        position: relative;
+        position: absolute;
         top: 50px;
         left: 200px;
         width: 170px;
       }
 
       .half-ring {
-        position: relative;
+        position: absolute;
         top: 170px;
-        left: -150px;
+        left: 10px;
         rotate: 30deg;
         width: 200px;
+      }
+
+      .background {
+        position: absolute;
+        top: 220px;
+        width: 400px;
+        rotate: -220deg;
+        z-index: -1;
       }
     }
 
@@ -70,23 +79,23 @@
 
     &-bottom {
       .curl {
-        position: relative;
+        position: absolute;
         left: 50px;
         rotate: 90deg;
         height: 130px;
       }
 
       .ball {
-        position: relative;
-        top: 20px;
-        left: 150px;
+        position: absolute;
+        top: 820px;
+        left: 200px;
         width: 170px;
       }
 
       .half-ring {
-        position: relative;
-        top: 80px;
-        left: 50px;
+        position: absolute;
+        top: 980px;
+        left: 70px;
         width: 220px;
         rotate: 210deg;
       }
@@ -94,31 +103,77 @@
   }
 }
 
+.form-curl-animation {
+  animation: formCurl 1s ease;
+}
+
+.form-ball-animation {
+  animation: formBall 1s ease;
+}
+
+.form-top-half-ring-animation {
+  animation: formTopHalfRing 1s ease;
+}
+
+.form-bottom-half-ring-animation {
+  animation: formBottomHalfRing 1s ease;
+}
+
+.form-background-animation {
+  animation: formBackground 1s ease;
+}
+
+.form-ring-animation {
+  animation: formRing 1s ease;
+}
+
 @media only screen and (min-width: 768px) {
   .form {
     &-container {
       &-top {
+        overflow: unset;
         .half-ring {
           width: 350px;
           top: 100px;
+          left: 200px;
         }
 
         .ring {
           width: 250px;
           left: 900px;
         }
+
+        .background {
+          top: 100px;
+          left: 500px;
+          width: 800px;
+        }
       }
 
       &-mid {
-        width: 40%;
+        background-color: #fff;
+        width: 50%;
         border-radius: 10px;
+        position: relative;
+        left: 200px;
       }
 
       &-bottom {
         .ball {
-          top: -60px;
-          left: 300px;
+          z-index: -1;
+          top: 650px;
+          left: 700px;
           width: 340px;
+        }
+
+        .half-ring {
+          top: 500px;
+          left: 1000px;
+        }
+
+        .curl {
+          height: 300px;
+          left: 300px;
         }
       }
     }
